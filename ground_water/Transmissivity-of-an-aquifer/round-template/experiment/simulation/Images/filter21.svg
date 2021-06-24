@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   sodipodi:docname="filter21.svg"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   id="svg1512"
+   version="1.1"
+   viewBox="0 0 66.253044 26.255085"
+   height="26.255085mm"
+   width="66.253044mm">
+  <defs
+     id="defs1506" />
+  <sodipodi:namedview
+     inkscape:window-maximized="1"
+     inkscape:window-y="-8"
+     inkscape:window-x="-8"
+     inkscape:window-height="705"
+     inkscape:window-width="1366"
+     showgrid="false"
+     inkscape:document-rotation="0"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="mm"
+     inkscape:cy="2.894104"
+     inkscape:cx="137.29595"
+     inkscape:zoom="1.979899"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base" />
+  <metadata
+     id="metadata1509">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(-91.622511,-241.58032)"
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Layer 1">
+    <path
+       inkscape:export-ydpi="96.099998"
+       inkscape:export-xdpi="96.099998"
+       inkscape:export-filename="C:\Users\Nisha\filter21.png"
+       sodipodi:nodetypes="cc"
+       id="path1436"
+       d="m 91.89603,259.21806 c 9.30081,8.7857 51.63648,13.7727 65.76786,-0.94494"
+       style="fill:none;stroke:#000000;stroke-width:0.423;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <path
+       inkscape:export-filename="C:\Users\Nisha\filter21.png"
+       inkscape:export-ydpi="96.099998"
+       inkscape:export-xdpi="96.099998"
+       style="fill:none;stroke:#000000;stroke-width:0.423;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 157.66389,242.22007 c 0,16.05305 0,16.05305 0,16.05305"
+       id="path1610" />
+    <path
+       inkscape:export-filename="C:\Users\Nisha\filter21.png"
+       inkscape:export-ydpi="96.099998"
+       inkscape:export-xdpi="96.099998"
+       style="fill:none;stroke:#000000;stroke-width:0.423;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 91.834177,241.79199 c 0,17.20652 0,17.20652 0,17.20652"
+       id="path1612" />
+    <path
+       inkscape:export-ydpi="96.099998"
+       inkscape:export-xdpi="96.099998"
+       inkscape:export-filename="C:\Users\Nisha\filter21.png"
+       style="fill:none;stroke:#000000;stroke-width:0.423;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 91.834177,241.79199 c 8.453583,8.39467 48.253243,13.55568 65.829713,0.42808"
+       id="path1436-3"
+       sodipodi:nodetypes="cc" />
+  </g>
+</svg>

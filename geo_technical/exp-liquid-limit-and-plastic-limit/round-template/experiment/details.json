@@ -1,0 +1,40 @@
+{
+
+   "details": [
+       {
+			"Experiment": "Liquid limit and plastic limit test ",
+			"Lab": "Geotechnical Engineering Lab",
+			"Discipline": "Civil Engineering",
+			"Technology": "HTML, Javascript, CSS, JQuery, Inkscape"
+       }
+   ],
+
+   "developer": [
+       {
+      "Developer": "Dr. Pruthviraj U",
+      "Institute": "National Institute of Technology Karnataka, Surathkal",
+      "InstituteAcronym": "NITK, Surathkal"
+       }
+   ],
+
+   "contributer": [
+       {
+			"Contributer": "Anusha B Salian",
+      "Institute": "National Institute of Technology Karnataka, Surathkal",
+			"InstituteAcronym": "NITK, Surathkal"
+       },
+
+       {
+			"Contributer": "Guruprasad T N",
+			"Institute": "National Institute of Technology Karnataka, Surathkal",
+			"InstituteAcronym": "NITK, Surathkal"
+       },
+
+       {
+			"Contributer": "Aishwarya Shetty",
+			"Institute": "National Institute of Technology Karnataka, Surathkal",
+			"InstituteAcronym": "NITK, Surathkal"
+       }
+   ]
+
+}

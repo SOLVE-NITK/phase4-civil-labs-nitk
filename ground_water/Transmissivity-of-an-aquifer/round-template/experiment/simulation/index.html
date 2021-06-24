@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+	<meta charset="UTF-8">
+
+	<title>SOLVE</title>
+	<link rel="stylesheet" href="css/sgca.css" />
+	<script type="text/javascript" src="js/sgca.js"></script>
+
+	<script>
+		var simsubscreennum = 0;
+		var temp = 0;
+		var lnt = 0;
+		var n;
+	</script>
+	<style>
+	</style>
+</head>
+
+<body style="margin:0; font-family:verdana; font-size:14px;">
+	<!--Simulation Screen start		-->
+	<div id="simscreen">
+		<!--Title of Simulation		-->
+		<div id="title" style="font-size: 18px;">
+			<h3>DETERMINATION OF THE TRANSMISSIVITY OF AN AQUIFER SOIL</h3>
+		</div>
+		<!--SubScreen Home	-->
+		<div class="simsubscreen" id="canvas0">
+			<h4 class="incanvas" style="font-family:verdana; ">Objective</h4>
+			<p class="incanvas" style="font-family:verdana; font-size:15px;">To determine the transmissivity of a highly
+				permeable soil in an aquifer.</p></br>
+			<h4 class="incanvas" style="font-family:verdana; ">Apparatus used:</h4>
+			<p class="incanvas" style="font-family:verdana; font-size:14px;"> Permeameter with its accessories, Standard
+				soil specimen, De-aired water, Balance to weigh up to 1 gm, I.S sieves 4.75 mm and 2 mm, mixing pan, Stop
+				watch, Measuring jar, Meter scale, Thermometer, Container for water.</p>
+			<span class="tooltip"
+				style="border-bottom:1px dotted ; color:red; position:absolute; left:5px;top:140px;"><strong>Description</strong>
+				<span class="tooltiptext" style="text-align:justify;left:90px;top:6px;"><strong
+						style="color:red;">Transmissivity:</strong> Transmissivity (or hydraulic conductivity) refers to
+					the ease with which water can flow through a soil. This property is necessary for the calculation of
+					seepage through earth dams or under sheet pile walls.</span></span>
+			<img id="" style="position: absolute; left: 220px; top: 335px;width:400px;" title="Table"
+				src="Images/table.png" />
+			<img id="" style="position: absolute; left: 260px; top: 295px; width:50px;" title="Cylinder"
+				src="Images/cylinder1.png" />
+			<img id="" style="position: absolute; left: 340px; top: 335px; width:80px;" title="Soil"
+				src="Images/soil.svg" />
+			<img id="" style="position: absolute; left: 443px; top: 338px; width:50px;" title="Filter"
+				src="Images/filter112.png" />
+			<img id="" style="position: absolute; left: 520px; top: 341px; width:50px;" title="Filter"
+				src="Images/filter21.png" />
+			<img style="position:absolute; left:-15px; top:160px;" src="Images/human.png" />
+		</div>
+
+		<!--Step1	-->
+		<div class="simsubscreen" id="canvas1" style="visibility:hidden">
+			<strong id="titlestep" class="incanvas">STEP </strong>
+			<span class="circlebg" id="stepnumber">&nbsp;1&nbsp;</span>
+			<p id="pumptext" class="steptext" style="font-family:verdana; font-size:14px;">Measure the internal diameter
+				of the cylindrical mould.</p>
+			<img id="mould" style="position: absolute; left: 50px; top: 212px;width:200px;" title="Cylinder"
+				src="Images/cylinder1.png" />
+			<img id="mould1" style="position: absolute; left: 50px; top: 212px;width:200px;" title="Cylinder"
+				src="Images/cylinder1.png" />
+			<img id="scale" style="position: absolute; left: 47px; top: 50px;visibility:hidden;" title="Scale"
+				src="Images/scale.png" />
+			<img id="scale1" style="position: absolute; left: 47px; top: 50px;visibility: hidden;" title="Scale"
+				src="Images/scale.png" />
+			<img id="scale11" style="position: absolute; left: 47px; top: 50px;visibility: hidden;" title="Scale"
+				src="Images/scale.png" />
+			<p id="Dia" style="visibility: hidden;position:absolute;top:172px;left:350px;color:red;visibility: hidden;">
+				Diameter of the cylindrical mould is = 7.3 cm.</p>
+			<p id="Dia1"
+				style="visibility: hidden;position:absolute;top:172px;left:350px;color:red;visibility: hidden;">Diameter
+				of
+				the cylindrical mould is = 9.83 cm.</p>
+			<p id="Dia2"
+				style="visibility: hidden;position:absolute;top:172px;left:350px;color:red;visibility: hidden;">Diameter
+				of
+				the cylindrical mould is = 10 cm.</p>
+			<br>
+			<div id="Area" class="input" style="position: absolute;left:350px;;top:250px;visibility:hidden;">
+				<label>Area of cylindrical mould = </label>
+				<input id="output2" type="number" autocomplete="off"
+					style="position:absolute;left:100%;top:1px;border:none; border-bottom: 1px solid; width:55px;"
+					required>
+				<span class="tooltip1" style="position:absolute;left:100%;top:-165%;">A=&pi;d<sup>2</sup>/4</span>
+				<label style="position:absolute;left:139%;top:0px;">cm<sup>2</sup></label>
+				<button id="button2" style="position:absolute;left:165%;top:1%;">Check</button>
+				<p id="right2"
+					style="position:absolute; left:130%; top:-155%; color:#32CD32;  visibility:hidden; font-size:22px;">
+					&#10004;
+				</p>
+				<p id="wrong2"
+					style="position:absolute; left:130%; top:-155%; color:red;  visibility:hidden; font-size:22px;">
+					&#10008;</p>
+			</div>
+			<div id="Area1" class="input" style="position: absolute;left:350px;;top:250px;visibility:hidden;">
+				<label>Area of cylindrical mould = </label>
+				<input id="output21" type="number" autocomplete="off"
+					style="position:absolute;left:100%;top:1px;border:none; border-bottom: 1px solid; width:55px;"
+					required>
+				<span class="tooltip1" style="position:absolute;left:100%;top:-165%;">A=&pi;d<sup>2</sup>/4</span>
+				<label style="position:absolute;left:139%;top:0px;">cm<sup>2</sup></label>
+				<button id="button21" style="position:absolute;left:165%;top:1%;">Check</button>
+				<p id="right21"
+					style="position:absolute; left:130%; top:-155%; color:#32CD32;  visibility:hidden; font-size:22px;">
+					&#10004;
+				</p>
+				<p id="wrong21"
+					style="position:absolute; left:130%; top:-155%; color:red;  visibility:hidden; font-size:22px;">
+					&#10008;</p>
+			</div>
+			<div id="Area2" class="input" style="position: absolute;left:350px;;top:250px;visibility:hidden;">
+				<label>Area of cylindrical mould = </label>
+				<input id="output22" type="number" autocomplete="off"
+					style="position:absolute;left:100%;top:1px;border:none; border-bottom: 1px solid; width:55px;"
+					required>
+				<span class="tooltip1" style="position:absolute;left:100%;top:-165%;">A=&pi;d<sup>2</sup>/4</span>
+				<label style="position:absolute;left:139%;top:0px;">cm<sup>2</sup></label>
+				<button id="button22" style="position:absolute;left:165%;top:1%;">Check</button>
+				<p id="right22"
+					style="position:absolute; left:130%; top:-155%; color:#32CD32;  visibility:hidden; font-size:22px;">
+					&#10004;
+				</p>
+				<p id="wrong22"
+					style="position:absolute; left:130%; top:-155%; color:red;  visibility:hidden; font-size:22px;">
+					&#10008;</p>
+			</div>
+		</div>
+
+		<div class="simsubscreen" id="canvas2" style="visibility:hidden">
+			<strong id="titlestep" class="incanvas">STEP </strong>
+			<span class="circlebg" id="stepnumber">&nbsp;2&nbsp;</span>
+			<p id="pumptext" class="steptext" style="font-family:verdana; font-size:14px;">Fill the mould with sample
+				soil and compact it to a density which may be
+				representative of the field conditions.</p>
+			<img id="b2" style="position: absolute; left: 170px; top: 200px;width:200px;" title="Cylinder"
+				src="Images/cylinder1.png" />
+			<img id="b22" style="position: absolute; left: 170px; top: 200px;width:200px;visibility:hidden"
+				title="Cylinder" src="Images/cylinder3.svg" />
+			<img id="b4" style="position: absolute; left: 170px; top: 200px;width:200px;visibility:hidden"
+				title="Cylinder" src="Images/cylinder41.svg" />
+			<img id="trowel1" style="position: absolute; left: 570px; top: 260px;width:180px;transform:rotate(-15deg);"
+				title="Trowel" src="Images/trowel1.png" />
+			<img id="trowel_2"
+				style="position: absolute; left: 570px; top: 260px;width:180px;transform:rotate(-15deg);visibility: hidden;"
+				title="Trowel" src="Images/trowel1.png" />
+			<img id="trowel_3"
+				style="position: absolute; left: 570px; top: 260px;width:180px;transform:rotate(-15deg);visibility: hidden;"
+				title="Trowel" src="Images/trowel1.png" />
+			<img id="trowel11"
+				style="position: absolute; left: 550px; top: 270px;width:180px;transform:rotate(-15deg);visibility:hidden"
+				title="Trowel" src="Images/trowel1.png" />
+			<img id="trowel1_2"
+				style="position: absolute; left: 550px; top: 270px;width:180px;transform:rotate(-15deg);visibility:hidden"
+				title="Trowel" src="Images/trowel1.png" />
+			<img id="trowel1_3"
+				style="position: absolute; left: 550px; top: 270px;width:180px;transform:rotate(-15deg);visibility:hidden"
+				title="Trowel" src="Images/trowel1.png" />
+			<img id="soil" style="position: absolute; left: 470px; top: 360px;width:180px;" title="Soil"
+				src="Images/soil.svg" />
+			<img id="soil1" style="position: absolute; left: 470px; top: 360px;width:180px;visibility: hidden"
+				title="Soil" src="Images/soil1.svg" />
+			<img id="soil2" style="position: absolute; left: 470px; top: 360px;width:180px;visibility: hidden"
+				title="Soil" src="Images/soil2.svg" />
+			<img id="trowel2"
+				style="position: absolute; left: 570px; top: 260px;width:180px;transform:rotate(-15deg);visibility: hidden;"
+				title="Trowel" src="Images/trowel3.svg" />
+			<img id="trowel2_1"
+				style="position: absolute; left: 570px; top: 260px;width:180px;transform:rotate(-15deg);visibility: hidden;"
+				title="Trowel" src="Images/trowel3.svg" />
+			<img id="trowel2_2"
+				style="position: absolute; left: 570px; top: 260px;width:180px;transform:rotate(-15deg);visibility: hidden;"
+				title="Trowel" src="Images/trowel3.svg" />
+			<img id="trowel21"
+				style="position: absolute; left: 570px; top: 270px;width:180px;transform:rotate(-15deg);visibility: hidden;"
+				title="Trowel" src="Images/trowel3.svg" />
+			<img id="trowel_0"
+				style="position: absolute; left: 570px; top: 270px;width:180px;transform:rotate(-15deg);visibility: hidden;"
+				title="Trowel" src="Images/trowel3.svg" />
+			<img id="trowel1_0"
+				style="position: absolute; left: 570px; top: 270px;width:180px;transform:rotate(-15deg);visibility: hidden;"
+				title="Trowel" src="Images/trowel3.svg" />
+		</div>
+
+		<div class="simsubscreen" id="canvas3" style="visibility:hidden">
+			<strong id="titlestep" class="incanvas">STEP </strong>
+			<span class="circlebg" id="stepnumber">&nbsp;3&nbsp;</span>
+			<p id="pumptext" class="steptext" style="font-family:verdana; font-size:14px;">Trim the soil which is poured
+				into the mould to the
+				dimensions similar to that of the mould. </p>
+			<img id="cylinder41" style="position: absolute; left: 170px; top: 195px;width:200px;" title="Cylinder"
+				src="Images/cylinder41.svg" />
+			<img id="cylinder42" style="position: absolute; left: 170px; top: 195px;width:200px;visibility: hidden;"
+				title="Cylinder" src="Images/cylinder42.svg" />
+			<img id="cylinder43" style="position: absolute; left: 170px; top: 195px;width:200px;visibility: hidden;"
+				title="Cylinder" src="Images/cylinder43.svg" />
+			<img id="tamp1" style="position: absolute; left: 210px; top: 48px;width:100px;" src="Images/tamp11.png" />
+			<img id="tamp11" style="position: absolute; left: 210px; top: 48px;width:100px;visibility: hidden;"
+				src="Images/tamp11.png" />
+			<img id="tamp01" style="position: absolute; left: 210px; top: 48px;width:100px;visibility: hidden;"
+				src="Images/tamp11.png" />
+			<img id="tamp2" style="position: absolute; left: 280px; top: 48px;width:100px;visibility: hidden;"
+				src="Images/tamp11.png" />
+			<img id="tamp22" style="position: absolute; left: 280px; top: 48px;width:100px;visibility: hidden;"
+				src="Images/tamp11.png" />
+			<img id="tamp02" style="position: absolute; left: 280px; top: 48px;width:100px;visibility: hidden;"
+				src="Images/tamp11.png" />
+		</div>
+
+		<div class="simsubscreen" id="canvas4" style="visibility:hidden">
+			<strong id="titlestep" class="incanvas">STEP </strong>
+			<span class="circlebg" id="stepnumber">&nbsp;4&nbsp;</span>
+			<p id="pumptext" class="steptext" style="font-family:verdana; font-size:14px;">Attach the mould with two
+				filter discs at the top and the bottom.</p>
+			<img id="a2" style="position: absolute; left: 250px; top: 180px;width:160px;"title="Cylinder"
+				src="Images/cylinder4.svg" />
+			<img id="disk10" style="position: absolute; left: 250px; top: 365px;width:159px;visibility: hidden;" title="Filter"
+				src="Images/filter23.svg" />
+			<img id="disk1" style="position: absolute; left: 250px; top: 444px;width:160px;" title="Filter"
+				src="Images/filter22.png" />
+			<img id="disk11" style="position: absolute; left: 250px; top: 444px;width:160px;visibility:hidden"
+				title="Filter" src="Images/filter22.png" />
+			<img id="disk01" style="position: absolute; left: 250px; top: 444px;width:160px;visibility:hidden"
+				title="Filter" src="Images/filter22.png" />
+			<img id="disk2" style="position: absolute; left: 250px; top: 65px;width:160px;" title="Filter"
+				src="Images/filter11.png" />
+			<img id="disk22" style="position: absolute; left: 250px; top: 65px;width:160px;height:100px;visibility:hidden"
+				title="Filter" src="Images/filter11.png" />
+			<img id="disk02" style="position: absolute; left: 250px; top: 65px;width:160px;height:100px;visibility:hidden"
+				title="Filter" src="Images/filter11.png" />
+			<img id="line1" style="position: absolute; left: 140px; top: 190px; width: 110px; visibility: hidden;" src="Images/line1.png">			
+			<p id="font1" style="visibility: hidden;position:absolute;top:250px;left:5px;color:red">Filter Disks<br>
+				(Highly Permeable)</p>
+			<img id="line2" style="position: absolute; left: 320px; top: 70px;width:20px;visibility: hidden;"
+				src="Images/line2.png" />
+			<p id="font2" style="visibility: hidden;position:absolute;top:35px;left:315px;color:red">Inlet</p>
+			<img id="line3" style="position: absolute; left: 410px; top: 100px;width:50px;visibility: hidden;"
+				src="Images/line3.png" />
+			<p id="font3" style="visibility: hidden;position:absolute;top:140px;left:470px;color:red">Manometers</p>
+			<img id="line4" style="position: absolute; left: 409px; top: 210px;width:100px;visibility: hidden;"
+				src="Images/line4.png" />
+			<img id="line5" style="position: absolute; left: 409px; top: 376px;width:60px;visibility: hidden;"
+				src="Images/line5.png" />
+			<p id="font4" style="visibility: hidden;position:absolute;top:362px;left:472px;color:red">Outlet</p>
+		</div>
+
+		<div class="simsubscreen" id="canvas5" style="visibility:hidden">
+			<strong id="titlestep" class="incanvas">STEP </strong>
+			<span class="circlebg" id="stepnumber">&nbsp;5&nbsp;</span>
+			<p id="pumptext" class="steptext" style="font-family:verdana; font-size:14px;">The inlet of the instrument
+				is connected with a constant head
+				water reservoir and water is released into the soil sample.
+			</p>
+ 			<img id="pipe" style="position: absolute; left: 550px;top:130px;visibility:hidden;" title="Cylinder" src="Images/pipe.png">
+ 			<img id="hand" src="Images/hand.png" style="position: absolute; left: 545px; top: 167px; visibility: hidden;">
+ 			<img id="c6" style="position: absolute; left: 175px; top: 155px; width: 250px;height:295px; visibility:hidden;" title="Cylinder" src="Images/cylinder66.png">
+			<img id="tap1" style="position: absolute; left: 175px; top: 75px;width:90px;visibility: hidden;" title="Tap"
+				src="Images/tap1.svg" />
+			<img id="tap2" style="position: absolute; left: 225.5px; top: 64px;width:25px;visibility: hidden;" title="Tap"
+				src="Images/tap2.svg" />
+			<img id="c1" style="position: absolute; left: 172px; top: 59px;width:255px;visibility: hidden;" title="Cylinder" src="Images/c11.png">
+			<img id="c2" style="position: absolute; left: 172px; top: 59px;width:255px;visibility: hidden;"
+				title="Cylinder" src="Images/c22.png">
+			<img id="c3" style="position: absolute; left: 172px; top: 59px;width:255px;visibility: hidden;"
+				title="Cylinder" src="Images/c33.png">
+			<img id="c4" style="position: absolute; left: 172px; top: 59px;width:255px;visibility: hidden;"
+				title="Cylinder" src="Images/c44.png">
+			<img id="c7" style="position: absolute; left: 172px; top: 59px;width:255px;visibility: hidden;"
+				title="Cylinder" src="Images/c77.png">
+			<img id="jar" style="position: absolute; left: 355px; top: 440px;width:80px;" title="Jar"
+				src="Images/jar.png" />
+			<div id="drop-2"
+				style="position: absolute; bottom: 25px; left: 359px; width: 75px; height: 15px; border-radius:0% 0% 0% 0%; background-color: rgb(161, 213, 245); visibility: hidden;">
+			</div>
+			<div id="drop-22"
+				style="position: absolute; bottom: 25px; left: 359px; width: 75px; height: 15px; border-radius:0% 0% 0% 0%; background-color: rgb(161, 213, 245); visibility: hidden;">
+			</div>
+			<div id="drop-02"
+				style="position: absolute; bottom: 25px; left: 359px; width: 75px; height: 15px; border-radius:0% 0% 0% 0%; background-color: rgb(161, 213, 245); visibility: hidden;">
+			</div>
+			<img id="jar1" style="position: absolute; left: 355px; top: 440px;width:80px;visibility: hidden;"
+				title="Jar" src="Images/jar1.png" />
+			<img id="c5" style="position: absolute; left: 172px; top: 59px;width:255px;visibility: hidden;"
+				title="Cylinder" src="Images/c55.png">
+			<img id="st" style="position: absolute; left: 160px; top: 442px;width:180px;" title="Tap"
+				src="Images/st.png" />
+			<img id="H1" style="position: absolute; left: 375px; top: 230px;width:78px;visibility:hidden;"
+				src="Images/H1.png" />
+			<img id="H2" style="position: absolute; left: 105px; top: 288px;width:230px;visibility:hidden;"
+				src="Images/H2.png" />
+			<img id="swh" style="position: absolute; left: 545px; top: 202px;width:115px;visibility:hidden;"
+				src="Images/swh.png" />
+			<img id="needle"
+				style="position: absolute; left: 601px; top: 267px;width:3.4px;transform-origin: 70% 94%; visibility:hidden;"
+				src="Images/needle.png" />
+			<img id="needle1"
+				style="position: absolute; left: 601px; top: 267px;width:3.4px;transform-origin: 70% 94%; visibility:hidden;"
+				src="Images/needle.png" />
+			<img id="needle2"
+				style="position: absolute; left: 601px; top: 267px;width:3.4px;transform-origin: 70% 94%; visibility:hidden;"
+				src="Images/needle.png" />
+			<p id="font11" style="font-size:14px;position:absolute;top:370px;left:510px;color:red;visibility: hidden;">
+				Fixed
+				Time
+				Interval = 60 sec</p>
+			<p id="font12" style="font-size:14px;position:absolute;top:370px;left:510px;color:red;visibility: hidden;">
+				Fixed
+				Time
+				Interval = 132 sec</p>
+			<p id="font13" style="font-size:14px;position:absolute;top:370px;left:510px;color:red;visibility: hidden;">
+				Fixed
+				Time
+				Interval = 300 sec</p>
+			<div id="white" style="position: absolute; width: 20px; height: 20px; background-color: white; left: 385px; top: 440px; visibility: hidden;">
+				</div>
+		</div>
+		<div class="simsubscreen" id="canvas6" style="visibility:hidden">
+			<strong class="incanvas" id="ob">
+				<h3>Observations: </h3>
+			</strong>
+			<label>Length of specimen L = <span id="L1"></span>cm
+			</label>
+			</br></br>
+			<label>Diameter of specimen = <span id="L2"></span>cm
+			</label>
+			<br><br>
+			<label>Area of specimen = <span id="L3"></span>cm<sup>2</sup>
+			</label>
+			<br><br>
+			<label>Time (t)= <span id="L4"></span>sec
+			</label>
+			<br><br>
+			<label>Discharge (Q)= <span id="L5"></span>cm<sup>3</sup>
+			</label>
+			<br><br>
+			<label>Height of Water (&#x394;H) = <span id="L6"></span>cm<sup>3</sup>
+			</label>
+			<br><br>
+			<label>Temperature (&#x2103;) = <span id="L7"></span>&#x2103;
+			</label>
+			<br><br>
+			<label>Aquifer thickness (D) = <span id="L8"></span>cm
+			</label>
+			<br><br>
+			<div id="tr_1" class="input" style="visibility: hidden;">
+				<label>Coefficient of permeability = </label>
+				<input id="output" type="number" autocomplete="off"
+					style="position:absolute;left:100%;top:1px;border:none; border-bottom: 1px solid; width:55px;"
+					required>
+				<span class="tooltip1" style="position:absolute;left:100%;top:-150%;width:41%">K=QL/&#x394;HtA</span>
+				<label style="position:absolute;left:139%;top:4px;">cm/sec</label>
+				<button id="button" style="position:absolute;left:165%;top:1%;">Check</button>
+				<p id="right"
+					style="position:absolute; left:130%; top:-143%; color:#32CD32;  visibility:hidden; font-size:22px;">
+					&#10004;
+				</p>
+				<p id="wrong"
+					style="position:absolute; left:130%; top:-143%; color:red;  visibility:hidden; font-size:22px;">
+					&#10008;</p>
+			</div>
+			</br></br>
+			<div id="tr_2" class="input" style="visibility: hidden;">
+				<label>Transmissivity of an aquifer soil = </label>
+				<input id="output1" type="number" autocomplete="off"
+					style="position:absolute;left:100%;top:1px;border:none; border-bottom: 1px solid; width:55px;"
+					required>
+				<span class="tooltip1" style="position:absolute;left:100%;top:-150%;">T=K*D</span>
+				<label style="position:absolute;left:135%;top:2px;">cm<sup>2</sup>/sec</label>
+				<button id="button1" style="position:absolute;left:162%;top:1%;visibility: hidden;">Check</button>
+				<p id="right1"
+					style="position:absolute; left:128%; top:-143%; color:#32CD32;  visibility:hidden; font-size:22px;">
+					&#10004;
+				</p>
+				<p id="wrong1"
+					style="position:absolute; left:128%; top:-143%; color:red;  visibility:hidden; font-size:22px;">
+					&#10008;</p>
+			</div>
+			</br></br>
+			<div id="d1" style="position:absolute;top:350px;width:400px;visibility: hidden;">
+				<div id="tr1_1" class="input" style="visibility: hidden;">
+					<label>Coefficient of permeability = </label>
+					<input id="output_1" type="number" autocomplete="off"
+						style="position:absolute;left:100%;top:1px;border:none; border-bottom: 1px solid; width:55px;"
+						required>
+					<span class="tooltip1" style="position:absolute;left:100%;top:-150%;width:41%">K=QL/&#x394;HtA</span>
+					<label style="position:absolute;left:139%;top:4px;">cm/sec</label>
+					<button id="button_1" style="position:absolute;left:165%;top:1%;">Check</button>
+					<p id="right_1"
+						style="position:absolute; left:130%; top:-143%; color:#32CD32;  visibility:hidden; font-size:22px;">
+						&#10004;
+					</p>
+					<p id="wrong_1"
+						style="position:absolute; left:130%; top:-143%; color:red;  visibility:hidden; font-size:22px;">
+						&#10008;</p>
+				</div>
+				</br></br>
+
+				<div id="tr1_2" class="input" style="visibility: hidden;">
+					<label>Transmissivity of an aquifer soil = </label>
+					<input id="output1_1" type="number" autocomplete="off"
+						style="position:absolute;left:100%;top:1px;border:none; border-bottom: 1px solid; width:55px;"
+						required>
+					<span class="tooltip1" style="position:absolute;left:100%;top:-150%;">T=K*D</span>
+					<label style="position:absolute;left:135%;top:2px;">cm<sup>2</sup>/sec</label>
+					<button id="button1_1" style="position:absolute;left:162%;top:1%;visibility: hidden;">Check</button>
+					<p id="right1_1"
+						style="position:absolute; left:128%; top:-143%; color:#32CD32;  visibility:hidden; font-size:22px;">
+						&#10004;
+					</p>
+					<p id="wrong1_1"
+						style="position:absolute; left:128%; top:-143%; color:red;  visibility:hidden; font-size:22px;">
+						&#10008;</p>
+				</div>
+			</div>
+
+			<div id="d2" style="position:absolute;top:350px;width:400px;visibility: hidden;">
+				<div id="tr2_1" class="input" style="visibility: hidden;">
+					<label>Coefficient of permeability = </label>
+					<input id="output_0" type="number" autocomplete="off"
+						style="position:absolute;left:100%;top:1px;border:none; border-bottom: 1px solid; width:55px;"
+						required>
+					<span class="tooltip1" style="position:absolute;left:100%;top:-150%;width:41%">K=QL/&#x394;HtA</span>
+					<label style="position:absolute;left:139%;top:4px;">cm/sec</label>
+					<button id="button_0" style="position:absolute;left:165%;top:1%;">Check</button>
+					<p id="right_0"
+						style="position:absolute; left:130%; top:-143%; color:#32CD32;  visibility:hidden; font-size:22px;">
+						&#10004;
+					</p>
+					<p id="wrong_0"
+						style="position:absolute; left:130%; top:-143%; color:red;  visibility:hidden; font-size:22px;">
+						&#10008;</p>
+				</div>
+				</br></br>
+
+				<div id="tr2_2" class="input" style="visibility: hidden;">
+					<label>Transmissivity of an aquifer soil = </label>
+					<input id="output1_0" type="number" autocomplete="off"
+						style="position:absolute;left:100%;top:1px;border:none; border-bottom: 1px solid; width:55px;"
+						required>
+					<span class="tooltip1" style="position:absolute;left:100%;top:-150%;">T=K*D</span>
+					<label style="position:absolute;left:135%;top:2px;">cm<sup>2</sup>/sec</label>
+					<button id="button1_0" style="position:absolute;left:162%;top:1%;visibility: hidden;">Check</button>
+					<p id="right1_0"
+						style="position:absolute; left:128%; top:-143%; color:#32CD32;  visibility:hidden; font-size:22px;">
+						&#10004;
+					</p>
+					<p id="wrong1_0"
+						style="position:absolute; left:128%; top:-143%; color:red;  visibility:hidden; font-size:22px;">
+						&#10008;</p>
+				</div>
+			</div>
+			</br></br>
+		</div>
+
+		<div class="simsubscreen" id="canvas7" style="visibility:hidden">
+			<strong class="incanvas" id="res1">
+				<h3>
+					Result:
+				</h3>
+			</strong>
+			<p id="result1" style="visibility: hidden;position: absolute;top:50px;">Transmissivity of a highly permeable
+				soil in an aquifer = 0.069
+				cm<sup>2</sup>/sec
+			</p>
+			<p id="result2" style="visibility: hidden;position: absolute;top:50px;">Transmissivity of a highly permeable
+				soil in an aquifer = 0.07
+				cm<sup>2</sup>/sec
+			</p>
+			<p id="result3" style="visibility: hidden;position: absolute;top:50px;">Transmissivity of a highly permeable
+				soil in an aquifer = 0.042
+				cm<sup>2</sup>/sec
+			</p>
+		</div>
+		<!--Trial text	-->
+		<div id="">
+			<p id="trial" style="text-transform: uppercase;visibility :hidden;font-weight: bold;font-family:verdana; ">
+				<strong>Trial = </strong>
+			</p>
+		</div>
+
+		<!--next  Arrow	-->
+		<div id="nav">
+			<img id="nextButton" onclick="navNext(); " src="Images/Next.png" />
+		</div>
+
+		<!--Blinking Arrow	-->
+		<img class="" id="arrow1" style="visibility:hidden" src="Images/arrow1.png" />
+
+		<div id="copyright"> &copy; 2021 SOLVE - The Virtual Lab @ NITK Surathkal, Department of Water Resources & Ocean
+			Engineering</div>
+</body>
+
+</html>

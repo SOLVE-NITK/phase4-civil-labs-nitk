@@ -1,0 +1,259 @@
+#simscreen
+{
+position: relative;
+left:0px;
+top:0px;
+height: 600px; 
+width:800px;
+border:solid 1px;
+}
+
+#copyright{
+position: absolute;
+left:50px;
+top: 580px;
+font-family: verdana; 
+font-size:12px
+}
+
+#title{
+position:relative;
+left: 0px;
+top: 0px;
+height:40px;
+font-size: 24px;
+text-align:center;
+background-color: black;
+font-family: verdana;
+color: White;
+text-transform: uppercase; 
+}
+
+#title h3{
+padding-top:2px;
+margin:0px;}
+
+#question-div{
+	position: absolute;
+	left:300px;
+	top:350px;
+	width:300px;
+	height:120px;
+	border:solid 1px gray;
+	background-color: gray;
+	filter: alpha(opacity=55);
+	color:white;
+	visibility:hidden;
+}
+
+.simsubscreen
+{
+position:absolute;
+left: 50px;
+top: 50px;
+height:530px;
+width:745px;
+
+}
+
+.incanvas
+{
+margin:5px 0 0 5px;
+padding:0;
+}
+#nextButton{
+    position: absolute;
+    left: 750px;
+    top: 530px;
+cursor:pointer;
+}
+
+.steptext{
+display:inline;
+}
+
+.circlebg
+{
+border-radius:100%;
+font-size:25px;
+color:#fff;
+text-align:center;
+background:#000
+}
+
+.tooltip {
+      position: initial;
+      display: inline-block;
+      border-bottom: 1px dotted black;
+      color:red;
+    }
+    .tooltip .tooltiptext {
+      visibility: hidden;
+      width: 500px;
+      background-color: black;
+      color: #fff;  padding: 5px 10px 5px 10px;
+      border-radius: 6px;
+      position: absolute;
+      z-index: 100;
+    }
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+    }
+
+    .tooltip1 .tooltiptext1 {
+	visibility: hidden;
+	width: 400px;
+     /*background-color: grey;*/
+	color: #fff;
+    
+	text-align: center;
+	border-radius: 6px;
+	padding: 5px 0;
+    margin-left: -70px;
+    margin-top: -30px;
+	/* Position the tooltip */
+	position: absolute;
+	z-index: 1;
+    }
+    
+    .tooltip1:hover .tooltiptext1 {
+    
+	visibility: visible;
+    }
+    
+    .input {
+	  position: absolute;
+    }
+    
+    .tooltip1 {
+	  display: none;
+	  padding: 5px;
+    
+    }
+    
+    .input:hover .tooltip1 {
+	  background: black;
+	  border-radius: 3px;
+	  bottom: 30px;
+	  color: white;
+	  display: inline;
+	  height: 20px;
+	  left: 0;
+	  line-height: 20px;
+    }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+@keyframes movek {
+    0% {left: 47px; top: 50px;}
+    100% { left: 47px; top: 160px;}
+}
+@-webkit-keyframes movek {
+    0% { left: 47px; top: 50px;}
+    100% { left: 47px; top: 160px;}
+}
+
+@keyframes movek1 {
+    0% {left: 250px; top: 45px;}
+    100% { left: 250px; top: 138px;}
+}
+@-webkit-keyframes movek1 {
+    0% { left: 250px; top: 45px;}
+    100% { left: 250px; top: 138px;}
+}
+
+@keyframes movek2 {
+    0% {left: 250px; top: 424px;}
+    100% { left: 250px; top: 348px;}
+}
+@-webkit-keyframes movek2 {
+    0% { left: 250px; top: 424px;}
+    100% { left: 250px; top: 348px;}
+}
+@keyframes movet {
+    0% {left: 570px; top: 255px;}
+    100% { left: 540px; top: 255px;}
+}
+@-webkit-keyframes movet{
+    0% { left: 570px; top: 255px;}
+    100% { left: 540px; top: 255px;}
+}
+@keyframes movet2 {
+    0% {left: 550px; top: 270px;}
+    100% { left: 520px; top: 270px;}
+}
+@-webkit-keyframes movet2{
+    0% { left: 550px; top: 270px;}
+    100% { left: 520px; top: 270px;}
+}
+@keyframes movet1 {
+    0% {left: 570px; top: 270px;}
+    100% { left: 260px; top: 85px;}
+}
+@-webkit-keyframes movet1{
+    0% { left: 570px; top: 270px;}
+    100% { left: 260px; top: 85px;}
+}
+@keyframes mover52 {
+    0% {transform:rotate(0deg); left: 601px; top: 267px;}
+    100% {transform:rotate(360deg); left: 601px; top: 267px;}
+    }
+
+@-webkit-keyframes mover52 {
+    0% {transform:rotate(0deg); left: 601px; top: 267px;}
+    100% {transform:rotate(360deg); left: 601px; top: 267px;}
+    }
+
+@keyframes mover54 {
+    0% {transform:rotate(0deg); left: 601px; top: 267px;}
+    100% {transform:rotate(784deg); left: 601px; top: 267px;}
+    }
+
+@-webkit-keyframes mover54 {
+    0% {transform:rotate(0deg); left: 601px; top: 267px;}
+    100% {transform:rotate(784deg); left: 601px; top: 267px;}
+    }
+
+@keyframes mover55 {
+    0% {transform:rotate(0deg); left: 601px; top: 267px;}
+    100% {transform:rotate(1800deg); left: 601px; top: 267px;}
+    }
+
+@-webkit-keyframes mover55 {
+    0% {transform:rotate(0deg); left: 601px; top: 267px;}
+    100% {transform:rotate(1800deg); left: 601px; top: 267px;}
+    }
+
+@keyframes mover53 {
+      0% { height:15px;}
+      100% {height:45px;}
+      }
+        @-webkit-keyframes mover53 {
+        0% {height:15px;}
+      100% {height:45px;}
+      }
+@keyframes movetamp {
+    0% {left: 210px; top: 40px;}
+    100% { left: 210px; top: 62px;}
+}
+@-webkit-keyframes movetamp{
+     0% {left: 210px; top: 40px;}
+    100% { left:210px; top: 62px;}
+}
+@keyframes movetamp1 {
+    0% {left: 280px; top: 40px;}
+    100% { left: 280px; top: 62px;}
+}
+@-webkit-keyframes movetamp1{
+     0% {left: 280px; top: 40px;}
+    100% { left:280px; top: 62px;}
+}

@@ -1,0 +1,57 @@
+{
+
+   "details": [
+       {
+			"Experiment": "To obtain the resistivity of the ground with the help of Georesistivity meter",
+			"Lab": "Ground Water Lab",
+			"Discipline": "Ground Water Lab",
+			"Technology": "HTML, Javascript, CSS, JQuery"
+       }
+   ],
+
+   "developer": [
+       {
+        "Developer": "Dr. Pruthviraj U",
+        "Institute": "National Institute of Technology Karnataka, Surathkal",
+        "InstituteAcronym": "NITK"  
+       }
+   ],
+
+   "contributer": [
+        {
+      "Contributer": "Kartik Pandey (16CV121)",
+      "Institute": "National Institute of Technology Karnataka, Surathkal",
+      "InstituteAcronym": "NITK"
+       },
+       {
+        "Developer": "Aditya Nagpal (171CV101)",
+        "Institute": "National Institute of Technology Karnataka, Surathkal",
+        "InstituteAcronym": "NITK"
+         }
+       {
+      "Contributer": "Rahul Ramesh (16CV228)",
+      "Institute": "National Institute of Technology Karnataka, Surathkal",
+      "InstituteAcronym": "NITK"
+       },
+
+       {
+      "Contributer": "Raman Adhikari (16CV134)",
+      "Institute": "National Institute of Technology Karnataka, Surathkal",
+      "InstituteAcronym": "NITK"
+       },
+
+      
+        {
+      "Contributer": "Nisha",
+      "Institute": "National Institute of Technology Karnataka, Surathkal",
+      "InstituteAcronym": "NITK"
+       },
+        {
+      "Contributer": "Sushmitha Wadde",
+      "Institute": "National Institute of Technology Karnataka, Surathkal",
+      "InstituteAcronym": "NITK"
+       },
+      
+   ]
+
+}

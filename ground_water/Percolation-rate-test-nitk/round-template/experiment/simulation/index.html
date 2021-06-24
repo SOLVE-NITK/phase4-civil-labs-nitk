@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <title>SOLVE</title>
+        <link rel="stylesheet" href="css/sgca.css" />
+        <script type="text/javascript" src="js/jquerymin.js"></script>
+        <script type="text/javascript" src="js/sgca.js"></script>
+        <script>
+            var simsubscreennum = 0;
+            var temp = 0;
+            var lnt = 0;
+            var sample = 1;
+            var n;
+            var sampletype = 1;
+        </script>
+        <style>
+        </style>
+    </head>
+    <body style="margin:0; font-family:verdana; font-size:14px;">
+
+        <!--Simulation Screen start		-->
+        <div id="simscreen">
+
+            <!--Title of Simulation		-->
+            <div id="title">
+                <h4>PERCOLATION RATE TEST</h4>
+            </div>
+
+            <!--SubScreen Home	-->
+            <div class="simsubscreen" id="canvas0">
+                <h4 class="incanvas" style="font-family:verdana; ">Objective</h4>
+                <p class="incanvas" style="font-family:verdana; font-size:15px;">To find the percolation rate of the soil samples.</p>
+                </br>
+                <h4 class="incanvas" style="font-family:verdana; ">Apparatus used:</h4>
+                <p class="incanvas" style="font-family:verdana; font-size:14px;">Funnel, Sand, Silt, Clay, Stopwatch, Graduated cylinder, Measuring Flask, Beaker, Water, Funnel stand.</p>
+                <br>
+                <span class="descont" style="border-bottom:1px dotted ; color:red; position:absolute; top:120px; z-index: 500;">Description
+                <span  class="desctext" style=" font-size:16px;">
+                <strong>Percolation Rate Test</strong> :  Is used to determine the water absorption capacity of the soil and plays a major role to determine filter field design and site suitability for an on-site wastewater treatment facility.  <br><br>
+                </span></span>
+                <img src="Images/human.png" alt="Human" style="position:absolute; margin-left:20px;margin-top:40px;">
+                <img id="" style="position: absolute; left: 290px; top: 350px; width:350px;height:150px;"
+				title="table" src="Images/table.png">
+                <img id="" style="position: absolute; left: 330px; top: 345px; width:35px; transform: rotate(90deg);" title="Funnel" src="Images/funnel.png">
+                <img title="Graduated Cylinder" style="position: absolute; left: 490px; top: 315px; width:35px;" src="Images/beaker1.png">
+                <img title="Stopwatch" style="position: absolute; left: 555px; top: 335px; width:40px;" title="Graduated Cylinder" src="Images/swh1.png">
+			    <img id="Stand" title="Stand" style="position: absolute; left: 410px; top: 245px; width:65px;" src="Images/stand.png">
+            </div>
+
+            <div class="simsubscreen" id="canvas0.5" style="visibility: hidden;">
+                <strong id="titlestep" class="incanvas">STEP </strong>
+                <span class="circlebg" id="stepnumber">&nbsp;1&nbsp;</span>
+                <p id="pumptext" class="steptext" style="font-family:verdana; font-size:14px;">Choose one of two soil type Sansdy soil or silty soil.</p>
+                <br>
+                <span style="position: absolute; top:150px; left: 100px">
+                <input type="radio" id="selectp3" name="sampletype" value="1" checked>
+                <label  for="selectp3">Sandy soil Sample</label>
+                </span>
+                <span style="position: absolute; top:150px; left: 420px">
+                <input type="radio" id="selectp12" name="sampletype" value="2">
+                <label  for="selectp12">Silty soil Sample</label>
+                </span>
+                <img  src="Images/sandysoil.svg" title="Soil" height="50px" style="position: absolute; top:200px; left:95px;z-index: -1;" />
+                <img  src="Images/sandysoil.svg" title="Soil" height="50px" style="position: absolute; top:200px; left:420px;z-index: -1;" />
+            </div>
+
+            <!--Step2	-->
+            <div class="simsubscreen" id="canvas1" style="visibility:hidden">
+                <strong id="titlestep" class="incanvas">STEP </strong>
+                <span class="circlebg" id="stepnumber">&nbsp;2&nbsp;</span>
+                <p id="pumptext" class="steptext" style="font-family:verdana; font-size:14px;">Take a funnel and put it on a funnel stand.</p>
+                <br>
+                <img id="stand" title="Stand" src="Images/stand.png" style="position:absolute;top:270px;left:120px"   width="100px">
+                <img id="hand" title="hand" src="Images/hand.png" style="position:absolute;width:290px;top:180px;left:300px"   >
+                <img id="standf" title="Stand" src="Images/standf.png" style="position:absolute;top:275px;left:120px;visibility:hidden;"   width="115px">
+            </div>
+
+            <!--Step3	-->
+            <div class="simsubscreen" id="canvas2" style="visibility:hidden">
+                <strong id="titlestep" class="incanvas">STEP </strong>
+                <span class="circlebg" id="stepnumber">&nbsp;3&nbsp;</span>
+                <p id="pumptext" class="steptext" style="font-family:verdana; font-size:14px;">Take the soil sample and put it in the funnel.</p>
+                <img id="standf" title="soil" src="Images/standf.png" style="position:absolute;top:275px;left:120px;"   width="115px">
+                <img id="setup10" src="Images/setup1.png" style="position:absolute;top:275px;left:120px;visibility:hidden"   width="115px">
+                <img id="sandysoil" title="soil" src="Images/sandysoil.svg" height="50px" style="position: absolute; top:420px; left:320px;z-index: -1;" />
+                <img id="sph" title="Hand" src="Images/sph.svg"  style="position: absolute; top:150px; left:400px;" />
+                <img id="sph2" title="Hand" src="Images/sph2.svg"  style="position: absolute;  top:290px; left:380px;visibility:hidden" />
+            </div>
+
+            <!--Step4	-->
+            <div class="simsubscreen" id="canvas3" style="visibility:hidden">
+                <strong id="titlestep" class="incanvas">STEP </strong>
+                <span class="circlebg" id="stepnumber">&nbsp;4&nbsp;</span>
+                <p id="pumptext" class="steptext" style="font-family:verdana; font-size:14px;">Place the graduated cylinder below the funnel.</p>
+                <br>
+                <br>
+                <img id="setup11" src="Images/setup1.png" style="position:absolute;top:275px;left:120px;"   width="115px">
+                <img id="beaker" title="Graduated Cylinder" src="Images/beaker.png" style="position:absolute;top:335px;left:260px;"   width="80px">
+                <img id="beakerh" title="Graduated Cylinder" src="Images/beakerh.png" style="position:absolute;top:325px;left:260px;visibility:hidden"   width="165px">
+                <img id="beakerh11" title="Graduated Cylinder"  src="Images/beaker.png" style="position:absolute;top:330px;left:160px;visibility: hidden;"   width="85px">
+            </div>
+
+            <!--Step5	-->
+                <div class="simsubscreen" id="canvas4" style="visibility:hidden">
+                <strong id="titlestep" class="incanvas">STEP </strong>
+                <span class="circlebg" id="stepnumber">&nbsp;5&nbsp;</span>
+                <p id="pumptext" class="steptext" style="font-family:verdana; font-size:14px;">Take a known amount of quantity of water (say 100 ml) and pour it slowly over the soil in the funnel.</p>
+                <img id="setup12" title="Stand" src="Images/setup1.png" style="position:absolute;top:275px;left:120px;visibility:hidden;"   width="115px">
+                <img id="setup2" title="Stand" src="Images/setup4.png" style="position:absolute;top:275px;left:120px;visibility:hidden;"   width="125px">
+                <img id="water" title="Water" src="Images/water.png" style="position:absolute;top:365px;left:350px;"   width="155px">
+                <img id="water1" title="Water" src="Images/water1.png" style="position: absolute; top: 135px; left: 185px; transform: rotate(0deg); visibility: hidden;" width="105px">
+                <img id="beakerh12" title="Graduated Cylinder" src="Images/beaker.png" style="position:absolute;top:330px;left:160px;visibility: hidden;"   width="85px">
+                <br>
+                <br>
+            </div>
+
+            <div class="simsubscreen" id="canvas5" style="visibility:hidden">
+                <strong id="titlestep" class="incanvas">STEP </strong>
+                <span class="circlebg" id="stepnumber">&nbsp;5&nbsp;</span>
+                <p id="pumptext" class="steptext" style="font-family:verdana; font-size:14px;">Start the stopwatch and	note down the amount collected in the cylinder after a known time and find the percolation rate of the sample.</p>
+                <table id="table2" border=1 style="text-align:center;border-collapse: collapse; font-size:14px;position:absolute; top:100px;width:380px;left:275px;visibility:hidden;">
+                    <tr>
+                        <td id="" >Time<br>(min)<br>(t)</td>
+                        <td id="" >Cylinder<br>Reading<br>(ml)(a)</td>
+                        <td id="" >Water <br>Collected<br>in 15 mins<br>(b)</td>
+                        <td id="" >Percolation <br>rate<br>(in ml/min)<br>(b/t)</td>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <!-- <td>0</td> -->
+                    </tr>
+                    
+                </table>
+                   <table id="table21" border=1 style="text-align:center; border-collapse: collapse; font-size:14px;width:123px;position:absolute;top:32.4%;left:533px; visibility:hidden;">
+				<tr><td>0</td></tr>
+				<tr>
+					<td id="r0" style="visibility: hidden;" >
+						<input id="o1" type="number" autocomplete="off"style="width:60px;position:absolute;left:10px;height:10px;" />&nbsp;</td>
+					</tr>
+						<button id="btn1"
+						style="position:absolute;left:90%;top:35.9%;visibility:hidden;">Check</button>
+					<p id="rgt1"
+						style="position:absolute; left:83%; top:31%; color:green;  visibility:hidden; font-size:21px;">
+						&#10004;
+					</p>
+					<p id="wng1"
+						style="position:absolute; left:83%; top:31%; color:red;  visibility:hidden; font-size:21px;">
+						&#10008;</p>
+				<tr>
+					<td id="r1"  style="visibility: hidden;">
+						<input id="o2" type="number" autocomplete="off"style="width:60px;position:absolute;left:10px;height:10px;"/> &nbsp;</td>
+					</tr>
+						<button id="btn2"
+						style="position:absolute;left:92%;top:40%;visibility:hidden;">Check</button>
+					<p id="rgt2"
+						style="position:absolute; left:83%; top:35.3%; color:green;  visibility:hidden; font-size:21px;">
+						&#10004;
+					</p>
+					<p id="wng2"
+						style="position:absolute; left:83%; top:35.3%; color:red;  visibility:hidden; font-size:21px;">
+						&#10008;</p>
+				<tr>
+					<td id="r2"  style="visibility: hidden;" >
+						<input id="o3" type="number" autocomplete="off"style="width:60px;position:absolute;left:10px;height:10px;" />&nbsp;</td>
+					</tr>
+					<button id="btn3"
+						style="position:absolute;left:92%;top:44%;visibility:hidden;">Check</button>
+					<p id="rgt3"
+						style="position:absolute; left:83%; top:39%; color:green;  visibility:hidden; font-size:21px;">
+						&#10004;
+					</p>
+					<p id="wng3"
+						style="position:absolute; left:83%; top:39%; color:red;  visibility:hidden; font-size:21px;">
+						&#10008;</p>
+				<tr>
+					<td id="r3"  style="visibility: hidden;">
+						<input id="o4" type="number" autocomplete="off" style="width:60px;position:absolute;left:10px;height:10px;" />&nbsp;
+					</td>
+				</tr>
+						<button id="btn4"
+						style="position:absolute;left:92%;top:47%;visibility:hidden;">Check</button>
+					<p id="rgt4"
+						style="position:absolute; left:83%; top:43%; color:green;  visibility:hidden; font-size:21px;">
+						&#10004;
+					</p>
+					<p id="wng4"
+						style="position:absolute; left:83%; top:43%; color:red;  visibility:hidden; font-size:21px;">
+						&#10008;</p>
+				<tr></tr>
+                </table>
+                <div id="div1" style="visibility:hidden;position: absolute;top:450px;" class="input">
+                    <label>Average Perculation Rate of Sandy Soil=</label>
+                    <input id="output1" type="number" autocomplete="off"
+                        style="position:absolute;left:100%;top:1px;border:none; border-bottom: 1px solid; width:55px;"
+                        required>
+                    <span class="tooltip1" style="position:absolute;left:100%;top:-340%;width:70%;height:280%" >Average perculation Rate/ <br>Total numberof readings</span>
+                    <label style="position:absolute;left:125%;top:2px;"></label>
+                    <button id="button1"
+                        style="position:absolute;left:127%;top:1%;">Check</button>
+                    <p id="right1"
+                        style="position:absolute; left:120%; top:-170%; color:green;  visibility:hidden; font-size:22px;">
+                        &#10004;
+                    </p>
+                    <p id="wrong1"
+                        style="position:absolute; left:120%; top:-170%; color:red;  visibility:hidden; font-size:22px;">
+                        &#10008;</p>
+                    
+                </div>
+
+                <img id="setup21" title="Stand" src="Images/setup4.png" style="position: absolute; top: 125px; left: -45px; visibility: hidden;" width="195px">
+                <div id="drop-1"  style="position: absolute; left: 72px; top: 250px; width: 9px; height: 9.5px; border-radius: 50% 0px 50% 50%; transform: rotate(-45deg); background-color: lightskyblue; visibility: hidden;"></div>
+                <div id="drop-2" style="position: absolute; bottom:120px; left: 59px; width: 35px; height: 15px; border-radius: 15% 15% 46% 46%; background-color: lightskyblue; visibility: hidden;"></div>
+                <img id="swh1" title="Stopwatch" src="Images/swh1.png" style="position: absolute; top: 265px; left: 135px; visibility: hidden;" width="135px">
+                <img id="needle" src="Images/needle.png" style="position: absolute; top: 293px; left: 201px;transform-origin: 70% 94%; visibility: hidden;" width="3.5px;">
+               
+
+                <table id="table3" border=1 style="text-align:center;border-collapse: collapse; font-size:14px;position:absolute; top:100px;width:380px;left:275px;visibility:hidden;">
+                    <tr>
+                        <td id="" >Time<br>(min)<br>(t)</td>
+                        <td id="" >Cylinder<br>Reading<br>(ml)(a)</td>
+                        <td id="" >Water <br>Collected<br>in 15 mins<br>(b)</td>
+                        <td id="" >Percolation <br>rate<br>(in ml/min)<br>(b/t)</td>
+                    </tr>
+                    <tr>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <!-- <td>0</td> -->
+                    </tr>
+                    
+                </table>
+                   <table id="table31" border=1 style="text-align:center; border-collapse: collapse; font-size:14px;width:123px;position:absolute;top:32.4%;left:533px; visibility:hidden;">
+				<tr><td>0</td></tr>
+				<tr>
+					<td id="q0" style="visibility: hidden;" >
+						<input id="o11" type="number" autocomplete="off"style="width:60px;position:absolute;left:10px;height:10px;" />&nbsp;</td>
+					</tr>
+						<button id="btn11"
+						style="position:absolute;left:90%;top:35.9%;visibility:hidden;">Check</button>
+					<p id="rgt11"
+						style="position:absolute; left:83%; top:31%; color:green;  visibility:hidden; font-size:21px;">
+						&#10004;
+					</p>
+					<p id="wng11"
+						style="position:absolute; left:83%; top:31%; color:red;  visibility:hidden; font-size:21px;">
+						&#10008;</p>
+					
+				<tr>
+					<td id="q1"  style="visibility: hidden;">
+						<input id="o21" type="number" autocomplete="off"style="width:60px;position:absolute;left:10px;height:10px;"/> &nbsp;</td>
+					</tr>
+						<button id="btn21"
+						style="position:absolute;left:92%;top:40%;visibility:hidden;">Check</button>
+					<p id="rgt21"
+						style="position:absolute; left:83%; top:35.3%; color:green;  visibility:hidden; font-size:21px;">
+						&#10004;
+					</p>
+					<p id="wng21"
+						style="position:absolute; left:83%; top:35.3%; color:red;  visibility:hidden; font-size:21px;">
+						&#10008;</p>
+					
+				<tr>
+					<td id="q2"  style="visibility: hidden;" >
+						<input id="o31" type="number" autocomplete="off"style="width:60px;position:absolute;left:10px;height:10px;" />&nbsp;</td>
+					</tr>
+					<button id="btn31"
+						style="position:absolute;left:92%;top:44%;visibility:hidden;">Check</button>
+					<p id="rgt31"
+						style="position:absolute; left:83%; top:39%; color:green;  visibility:hidden; font-size:21px;">
+						&#10004;
+					</p>
+					<p id="wng31"
+						style="position:absolute; left:83%; top:39%; color:red;  visibility:hidden; font-size:21px;">
+						&#10008;</p>
+				<tr>
+					<td id="q3"  style="visibility: hidden;">
+						<input id="o41" type="number" autocomplete="off" style="width:60px;position:absolute;left:10px;height:10px;" />&nbsp;
+					</td>
+				</tr>
+						<button id="btn41"
+						style="position:absolute;left:92%;top:47%;visibility:hidden;">Check</button>
+					<p id="rgt41"
+						style="position:absolute; left:83%; top:43%; color:green;  visibility:hidden; font-size:21px;">
+						&#10004;
+					</p>
+					<p id="wng41"
+						style="position:absolute; left:83%; top:43%; color:red;  visibility:hidden; font-size:21px;">
+						&#10008;</p>
+				<tr></tr>
+                </table>
+                <div id="div2" style="visibility:hidden;position: absolute;top:450px;" class="input">
+                    <label>Average Perculation Rate of Sandy Soil=</label>
+                    <input id="output11" type="number" autocomplete="off"
+                        style="position:absolute;left:100%;top:1px;border:none; border-bottom: 1px solid; width:55px;"
+                        required>
+                    <span class="tooltip1" style="position:absolute;left:100%;top:-340%;width:70%;height:280%" >Average perculation Rate/ <br>Total numberof readings</span>
+                    <label style="position:absolute;left:125%;top:2px;"></label>
+                    <button id="button11"
+                        style="position:absolute;left:127%;top:1%;">Check</button>
+                    <p id="right11"
+                        style="position:absolute; left:120%; top:-170%; color:green;  visibility:hidden; font-size:22px;">
+                        &#10004;
+                    </p>
+                    <p id="wrong11"
+                        style="position:absolute; left:120%; top:-170%; color:red;  visibility:hidden; font-size:22px;">
+                        &#10008;</p>
+                   
+                </div>
+
+                <img id="setup22" title="Stand" src="Images/setup4.png" style="position: absolute; top: 125px; left: -45px; visibility: hidden;" width="195px">
+                <div id="drop-12" style="position: absolute; left: 72px; top: 250px; width: 9px; height: 9.5px; border-radius: 50% 0px 50% 50%; transform: rotate(-45deg); background-color: lightskyblue; visibility: hidden;"></div>
+                <div id="drop-22" style="position: absolute; bottom:120px; left: 59px; width: 35px; height: 15px; border-radius: 15% 15% 46% 46%; background-color: lightskyblue; visibility: hidden;"></div>
+                <img id="swh11" title="Stopwatch" src="Images/swh1.png" style="position: absolute; top: 265px; left: 135px; visibility: hidden;" width="135px">
+                <img id="needle1" src="Images/needle.png" style="position: absolute; top: 293px; left: 201px;transform-origin: 70% 94%; visibility: hidden;" width="3.5px;">
+            </div>
+          
+            <div class="simsubscreen" id="canvas6" style="visibility:hidden;">
+                <strong class="incanvas" id="ob">
+                    <h3>
+                        Result: 
+                    </h3>
+                </strong>
+                <p id="l1" style="font-size:14px;position:absolute;top:70px;visibility:hidden;">1. Average percolation rate of the soil is for Sandy soil= 1.65 mL/min.</p>
+                <p id="l2" style="font-size:14px;position:absolute;top:70px;visibility:hidden;">1. Average percolation rate of the soil is for Silty soil= 0.72 mL/min</p>
+             </div>
+
+        <div id="questDiv" style="position:absolute; font-size: 14px; background-color:grey; color:white; padding:7.5px; border-radius:5px; visibility:hidden; text-align:justify; z-index: 200;">
+            <p id="q"></p>
+            <select id="answer">
+            </select>
+            <p id="a"></p>
+        </div> 
+
+        <!--Trial text	-->
+        <div id="">
+            <p id="trial" style="text-transform: uppercase;visibility :hidden;font-weight: bold;font-family:verdana; "><strong>Trial = </strong></p>
+        </div>
+
+        <!--next  Arrow	-->
+        <div id="nav">
+            <img id="nextButton" onclick="navNext(); " src="Images/Next.png" />
+        </div>
+
+        <!--Blinking Arrow	-->
+        <img class="" id="arrow1" style="visibility:hidden" src="Images/arrow1.png" />
+
+        <div id="copyright"> &copy; 2020 SOLVE - The Virtual Lab @ NITK Surathkal, Department of Water Resources & Ocean Engineering</div>
+
+    </body>
+</html>
