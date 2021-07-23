@@ -32,7 +32,11 @@ let labs = [
         experiments: [
             {id: "Microstructural analysis of stainless steels", path: "http://vlabs.iitb.ac.in/vlabs-dev/labs/nitk_labs/physical-metallurgy/labs/microstructural-analysis-nitk/index.html"},
             {id: "Comparison between mild steel and grey cast iron", path: "http://vlabs.iitb.ac.in/vlabs-dev/labs/nitk_labs/physical-metallurgy/labs/mildsteel-castiron-nitk/index.html"},
-            {id: "Severity of quenching", path: "http://vlabs.iitb.ac.in/vlabs-dev/labs/nitk_labs/physical-metallurgy/labs/quenching-severity-nitk/index.html"}]    
+            {id: "Severity of quenching", path: "http://vlabs.iitb.ac.in/vlabs-dev/labs/nitk_labs/physical-metallurgy/labs/quenching-severity-nitk/index.html"},
+            {id: "Grain Size Measurement", path: "physicalMetallurgy/exp-grain-size-measuremnt/index.html"},
+            {id: "Optical Microscopy of Non Ferrous Samples", path: "physicalMetallurgy/exp-optical-microscopy/index.html"},
+            {id: "Determination of Crystall Structure of a Powder Sample by X-RAY Diffractometer", path: "physicalMetallurgy/exp-crystal-structure/index.html"},
+        ]    
     },
     // { 
     //     labName: "Engineering Mechanics", 

@@ -1,0 +1,1 @@
+To identify the unknown powder sample by indexing of peaks with the help of obtained XRD pattern.
