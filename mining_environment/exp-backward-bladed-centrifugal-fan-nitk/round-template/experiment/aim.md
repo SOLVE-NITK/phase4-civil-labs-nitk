@@ -1,0 +1,1 @@
+To draw the characteristics curve of backward bladed centrifugal fan.

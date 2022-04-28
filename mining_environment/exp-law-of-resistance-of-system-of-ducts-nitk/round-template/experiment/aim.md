@@ -1,0 +1,1 @@
+To verify the law of the resistance of a system of ducts connected in series.

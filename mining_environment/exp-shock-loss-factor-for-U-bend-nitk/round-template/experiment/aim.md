@@ -1,0 +1,1 @@
+To determine the shock loss factor for a U bend in a ventilation duct with the axial fan running at a given rpm.

@@ -1,0 +1,1 @@
+To determine the Resistance and K–factor between any two given points in the ventilation duct provided with centrifugal fan.

@@ -1,0 +1,392 @@
+#simscreen
+{
+position: relative;
+left:0px;
+top:0px;
+height: 600px; 
+width:800px;
+border:solid 1px;
+}
+
+#copyright{
+position: absolute;
+left:50px;
+top: 580px;
+font-family: verdana; 
+font-size:12px
+}
+
+#title{
+position:relative;
+left: 0px;
+top: 0px;
+height:40px;
+font-size: 24px;
+text-align:center;
+background-color: black;
+font-family: verdana;
+color: White;
+text-transform: uppercase; 
+}
+
+#title h3{
+padding-top:2px;
+margin:0px;}
+
+#question-div{
+	position: absolute;
+	left:300px;
+	top:350px;
+	width:300px;
+	height:120px;
+	border:solid 1px gray;
+	background-color: gray;
+	filter: alpha(opacity=55);
+	color:white;
+	visibility:hidden;
+}
+
+.simsubscreen
+{
+position:absolute;
+left: 50px;
+top: 50px;
+height:530px;
+width:745px;
+
+}
+
+.incanvas
+{
+margin:5px 0 0 5px;
+padding:0;
+}
+#nextButton{
+    position: absolute;
+    left: 750px;
+    top: 530px;
+cursor:pointer;
+}
+
+.steptext{
+display:inline;
+}
+
+.circlebg
+{
+border-radius:100%;
+font-size:25px;
+color:#fff;
+text-align:center;
+background:#000
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+font-family: verdana;
+font-size:14px;
+ visibility: hidden;
+ width: 230px;
+ background-color: black;
+ color: black;
+ border-radius: 6px;
+ padding: 10px 10px 10px 10px;
+visibility: visible;
+
+ /* Position the tooltip */
+ position: absolute;
+ left:200px;
+ top:20px;
+ z-index: 100;
+}
+
+.tooltip1 {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+
+}
+
+.tooltip1 .tooltiptext1 {
+  visibility: hidden;
+  width: 400px;
+  background-color: grey;
+  color: #fff;
+
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+margin-left: -70px;
+margin-top: -30px;
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip1:hover .tooltiptext1 {
+
+  visibility: visible;
+}
+
+@-webkit-keyframes movescale {
+  from {top:320px;  }
+  to {top:205px; }
+}
+@keyframes movescale {
+  from {top:320px;  }
+  to {top:205px; }
+} 
+
+
+@-webkit-keyframes mos {
+  from {top: 65px;  }
+  to {top:75px; }
+}
+@keyframes mos {
+  from {top: 65px;  }
+  to {top:75px; }
+} 
+
+
+@-webkit-keyframes moss {
+  from {top:75px;  }
+  to {top:65px; }
+}
+@keyframes moss {
+  from {top:75px;  }
+  to {top:65px; }
+} 
+
+
+@-webkit-keyframes movv {
+  from {top: 308px;  }
+  to {top:320px; }
+}
+@keyframes movv {
+  from {top: 308px;  }
+  to {top:320px; }
+} 
+
+
+@-webkit-keyframes movw {
+  from {top:320px;  }
+  to {top:308px; }
+}
+@keyframes movw {
+  from {top:320px;  }
+  to {top:308px; }
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+@-webkit-keyframes movefan {
+  from { top: 285px; }
+  to { top: 155px; }
+}
+@keyframes movefan {
+  from { top: 285px; }
+  to { top: 155px; }
+} 
+
+@-webkit-keyframes movevm {
+  from {  top: 300px;  }
+  to { top: 165px; }
+}
+@keyframes movevm {
+  from {  top: 300px; }
+  to { top: 165px; }
+} 
+
+@-webkit-keyframes moves {
+  from {left: 225px; top: 150px; }
+  to {left: 220px; top: 155px; }
+}
+@keyframes moves {
+  from {left: 225px; top: 150px;  }
+  to {left: 220px; top: 155px; }
+} 
+
+
+@-webkit-keyframes movess {
+  from {left: 220px; top: 155px;  }
+  to {left: 225px; top: 150px;}
+}
+@keyframes movess {
+  from {left: 220px; top: 155px;  }
+  to {left: 225px; top: 150px; }
+} 
+
+
+@-webkit-keyframes moveclutch {
+  from {left: 680px;top: 100px;}
+  to {left: 665px;top: 105px; }
+}
+@keyframes moveclutch {
+  from {left: 680px;top: 100px;}
+  to {left: 665px;top: 105px;}
+} 
+
+@-webkit-keyframes moveclut {
+  from {left: 665px;top: 105px;}
+  to { left: 680px;top: 100px;}
+}
+@keyframes moveclut {
+  from {left: 665px;top: 105px;}
+  to { left: 680px;top: 100px;}
+  } 
+@-webkit-keyframes movehand {
+  from {top: 170px;left: 710px;  }
+  to {top:130px;left: 690px; }
+}
+@keyframes movehand {
+  from {top: 170px;left: 710px;  }
+  to {top:130px;left: 690px; }
+} 
+
+@-webkit-keyframes movehandd {
+  from {top:125px;left: 680px;  }
+  to { top:127px;left: 670px;}
+}
+@keyframes movehandd {
+  from {top:125px;left: 680px;  }
+  to {top:127px;left: 670px; }
+} 
+
+@-webkit-keyframes rotates{
+ 0%{ transform:rotate(0deg)}
+ 100%{ transform:rotate(830deg)}
+}
+@keyframes rotates{
+  0%{ transform:rotate(0deg)}
+  100%{ transform:rotate(830deg)}
+}
+@-webkit-keyframes rotate1{
+ 0%{ transform:rotate(0deg)}
+ 100%{ transform:rotate(860deg)}
+}
+@keyframes rotate1{
+  0%{ transform:rotate(0deg)}
+  100%{ transform:rotate(860deg)}
+}
+
+@-webkit-keyframes rotate2{
+ 0%{ transform:rotate(0deg)}
+ 100%{ transform:rotate(800deg)}
+}
+@keyframes rotate2{
+  0%{ transform:rotate(0deg)}
+  100%{ transform:rotate(800deg)}
+}
+
+@-webkit-keyframes rotat{
+ 0%{ transform:rotate(0deg)}
+ 100%{ transform:rotate(80deg)}
+
+}
+@keyframes rotat{
+  0%{ transform:rotate(0deg)}
+  100%{ transform:rotate(80deg)}
+}
+@-webkit-keyframes rotate{
+ 0%{ transform:rotate(0deg)}
+ 100%{ transform:rotate(720deg)}
+
+}
+@keyframes rotate{
+  0%{ transform:rotate(0deg)}
+  100%{ transform:rotate(720deg)}
+}
+
+@-webkit-keyframes rot{
+ 0%{ transform:rotate(20deg)}
+ 100%{ transform:rotate(0deg)}
+}
+@keyframes rot{
+  0%{ transform:rotate(20deg)}
+  100%{ transform:rotate(0deg)}
+}
+
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.scd{
+  border:2px solid red;
+  width:110px;
+  height:55px;
+  z-index:50;
+  border-bottom-left-radius:57px;
+  border-bottom-right-radius:57px;
+  border-top:0;
+}
+
+.scu{
+  border:2px solid red;
+  width:110px;
+  height:55px;
+  z-index:50;
+  border-top-left-radius:57px;
+  border-top-right-radius:57px;
+  border-bottom:0;
+}
+
+.scm{
+  width:114px;
+  height:57px;
+  z-index:52;
+  background-color:white;
+  transition:all 1.2s ease-in-out;
+}
+
+.linepath{
+  transition:all 1s linear;
+  background-color:red;
+  width:2px;
+  z-index:50;
+}
+
+.linepath2{
+  transition:all 1s linear;
+  background-color:blue;
+  width:2px;
+  z-index:55;
+}
+
+#sc32cont{
+  transition:width 1.2s ease-in-out;
+  overflow: hidden;
+}
+
+.scd2{
+  border:2px solid blue;
+  width:110px;
+  height:55px;
+  z-index:45;
+  border-bottom-left-radius:57px;
+  border-bottom-right-radius:57px;
+  border-top:0;
+}

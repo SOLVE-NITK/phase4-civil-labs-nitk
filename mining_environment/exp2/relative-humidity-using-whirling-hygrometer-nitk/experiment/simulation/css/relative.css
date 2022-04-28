@@ -1,0 +1,262 @@
+#simscreen
+{
+position: relative;
+left:0px;
+top:0px;
+height: 600px;
+width:800px;
+border:solid 1px;
+}
+
+#copyright{
+position: absolute;
+left:50px;
+top: 580px;
+font-family: verdana;
+font-size:12px
+}
+
+#title{
+position:relative;
+left: 0px;
+top: 0px;
+height:40px;
+font-size: 24px;
+text-align:center;
+background-color: black;
+font-family: verdana;
+color: White;
+text-transform: uppercase;
+}
+
+#title h3{
+padding-top:2px;
+margin:0px;}
+
+#question-div{
+	position: absolute;
+	left:300px;
+	top:350px;
+	width:300px;
+	height:120px;
+	border:solid 1px gray;
+	background-color: gray;
+	filter: alpha(opacity=55);
+	color:white;
+	visibility:hidden;
+}
+
+.simsubscreen
+{
+position:absolute;
+left: 50px;
+top: 50px;
+height:530px;
+width:745px;
+
+}
+
+.incanvas
+{
+margin:5px 0 0 5px;
+padding:0;
+}
+#nextButton{
+    position: absolute;
+    left: 750px;
+    top: 530px;
+cursor:pointer;
+}
+
+.steptext{
+display:inline;
+}
+.circlebg
+{
+border-radius:100%;
+font-size:25px;
+color:#fff;
+text-align:center;
+background:#000
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+font-family: verdana;
+font-size:14px;
+ visibility: hidden;
+ width: 230px;
+ background-color: black;
+ color: black;
+ border-radius: 6px;
+ padding: 5px 5px 5px 5px;
+visibility: visible;
+
+ /* Position the tooltip */
+ position: absolute;
+ left:200px;
+ top:20px;
+ z-index: 100;
+}
+.input {
+    position: absolute;
+}
+
+
+
+.input:hover .tooltip1 {
+    background: black;
+    border-radius: 3px;
+    bottom: 30px;
+    color: white;
+    display: inline;
+    height: 20px;
+    left: 0;
+    line-height: 20px;
+
+}
+/*  */
+
+.tooltip1 {
+    display: none;
+    padding: 5px;
+
+}
+#simscreen{
+			 position: relative;
+			 left:0px;
+			 top:0px;
+			 height: 600px;
+			 width:800px;
+			 border:solid 1px;}
+
+			 #title{
+			 position:relative;
+			 left: 0px;
+			 top: 0px;
+			 height:40px;
+			 font-size: 24px;
+			 text-align:center;
+			 background-color: black;
+			 font-family: verdana;
+			 color: White;
+			 text-transform: uppercase; }
+
+			 #title h4{
+			 padding-top:4px;
+			 margin:0px;}
+
+			 .simsubscreen{
+			 position:absolute;
+			 left: 50px;
+			 top: 50px;
+			 height:530px;
+			 width:745px;}
+
+			 .incanvas{
+			 margin:5px 0 0 5px;
+			 padding:0;}
+
+			 .slider:hover {
+				 opacity: 1;}
+
+			 .slider {
+				 -webkit-appearance: none;
+				 width: 100%;
+				 height: 7px;
+				 border-radius: 3px;
+				 background: #d3d3d3;
+				 outline: none;
+				 opacity: 0.7;
+				 -webkit-transition: .2s;
+				 transition: opacity .2s;}
+
+			 .slider::-webkit-slider-thumb {
+				 -webkit-appearance: none;
+				 appearance: none;
+				 width: 10px;
+				 height: 20px;
+				 border-radius: 3px;
+				 background: #4CAF50;
+				 cursor: pointer;}
+
+			 .slider::-moz-range-thumb {
+				 width: 10px;
+				 height: 20px;
+				 border-radius: 3px;
+				 background: #4CAF50;
+				 cursor: pointer;}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+@keyframes moveb {
+  from {left: 130px; top: 170px;}
+  to { left: 195px;top: 170px;}
+  }
+@-webkit-keyframes moveb {
+  from {left: 130px; top: 170px; }
+  to {left: 195px; top: 170px;}
+}
+@keyframes moveh {
+  from {left: 320px; top: 220px;}
+  to { left: 260px;top: 220px;}
+  }
+@-webkit-keyframes moveh {
+  from {left: 320px; top: 220px; }
+  to {left: 260px; top: 220px;}
+}
+
+@-webkit-keyframes rotate{
+ 0%{ transform:rotate(0deg)}
+ 100%{ transform:rotate(720deg)}
+
+}
+@keyframes rotate{
+  0%{ transform:rotate(0deg)}
+  100%{ transform:rotate(720deg)}
+}
+
+
+@-webkit-keyframes water-6 {
+0% {-webkit-transform: translate(0, 0 );}
+100% {-webkit-transform: translate(0, 35px );}
+}
+
+/* Standard syntax */
+@keyframes water-6 {
+    0% {transform: translate(0, 0);}
+    100% {transform: translate(0, 35px);}
+}
+@-webkit-keyframes drop {
+  0% {
+    transform: scale3d(0.01,0.01,0.01) translateY(0) rotate(-45deg)
+  }
+
+  100% {
+    transform: scale3d(1,1,1) translateY(38px) rotate(-45deg)
+  }
+}
+@keyframes drop {
+  0% {
+    transform: scale3d(0.01,0.01,0.01) translateY(0) rotate(-45deg)
+  }
+
+  100% {
+    transform: scale3d(1,1,0) translateY(52px) rotate(-45deg)
+  }
+}

@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="UTF-8">
+  <title>SOLVE</title>
+  <link rel="stylesheet" href="css/Anemometer.css" />
+  <script type="text/javascript" src="js/jquerymin.js"></script>
+  <script type="text/javascript" src="js/Anemometer.js"></script>
+  <script>
+    var simsubscreennum = 0;
+    var temp = 0;
+  </script>
+  <style>
+    .popup {
+      border-radius: 5px;
+      background-color: black;
+      color: white;
+      padding: 5px;
+    }
+
+    .tooltip {
+      position: relative;
+      display: inline-block;
+      border-bottom: 1px dotted black;
+    }
+
+    .tooltip .tooltiptext {
+      visibility: hidden;
+      width: 500px;
+      background-color: black;
+      color: #fff;
+      padding: 10px 10px 10px 10px;
+      border-radius: 6px;
+      position: absolute;
+      z-index: 100;
+    }
+
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+    }
+  </style>
+</head>
+
+<body style="margin:0; font-family:verdana; font-size:14px;">
+  <!--Simulation Screen start		-->
+  <div id="simscreen">
+
+    <!--Title of Simulation		-->
+    <div id="title">
+      <h3>Air velocity using Vane Anemometer</h3>
+    </div>
+
+    <!--SubScreen Home	-->
+    <div class="simsubscreen" id="canvas0">
+      <h4 class="incanvas" style="font-family:verdana; ">Objective:</h4>
+      <p class="incanvas" style="font-family:verdana; font-size:15px;">To determine the air velocity using Vane
+        Anemometer across the given cross-sectional area.</p></br>
+      <h4 class="incanvas" style="font-family:verdana; ">Apparatus used:</h4>
+      <p class="incanvas" style="font-family:verdana; font-size:14px;">Vane Anemometer, 1.5m Long Rod, Stopwatch etc.
+      </p>
+      <span class="tooltip"
+        style="border-bottom:1px dotted ; color:red; position:absolute; left:5px;top:140px;"><strong>Description</strong>
+        <span class="tooltiptext" style="text-align:justify;left:90px;top:6px;"><strong style="color:red;">Vane
+            Anemometer:</strong> It is also known as propeller anemometer. The Vane Anemometer have its axis parallel to
+          the direction of the wind and therefore horizontal. Low range vane anemometer will typically have eight vanes,
+          jeweled bearings and give velocity reading in the range of 0.25-15 m/sec. </span></span>
+      <img id="" style="position: absolute; left: 80px; top: 170px; width:110px;height:350px;" title=""
+        src="Images/human.png" />
+      <img id="" style="position: absolute; left: 290px; top: 350px; width:300px;height:150px;" title="table"
+        src="Images/table.png" />
+      <img id="" style="position: absolute; left: 320px; top: 330px; width:40px; height:40px;" title="Vane Anemometer"
+        src="Images/vm1.png" />
+      <img id="a19" style="position: absolute; left: 545px; top: 329px;width:5px;" src="Images/cap.png" />
+
+      <img id="" style="position: absolute; left: 380px; top: 340px; width:130px; height:40px;" title="Rod"
+        src="Images/rod1.png" />
+      <img id="" style="position: absolute; left: 530px; top: 335px; width:35px; " title="Stopwatch"
+        src="Images/swh1.png" />
+      <img id="" style="position: absolute; left: 547px; top: 342.8px;width:1.2px;" title="clock Hand"
+        src="Images/nd.png" />
+    </div>
+
+    <!--Step1	-->
+    <div class="simsubscreen" id="canvas1" style="visibility:hidden">
+      <strong id="titlestep" class="incanvas">STEP </strong>
+      <span class="circlebg" id="stepnumber">&nbsp;1&nbsp;</span>
+      <p id="pumptext" class="steptext" style="font-family:verdana; font-size:14px;">Attach 1.5 m rod to anemometer and
+        set it to zero by pressing the zero setting lever.</p>
+      <img id="a2" style="position: absolute; left: 477px; top: 320px;width:90px;height:140px;visibility:hidden; "
+        title="Rod" src="Images/rodd.png" />
+      <img id="a1" style="position: absolute; left: 450px; top: 285px;width:60px;" title="Vane Anemometer"
+        src="Images/bitrr.png" />
+      <img id="a3" style="position: absolute; left: 468px; top: 295px;width:35px;" src="Images/fan1.png" />
+
+      <img id="arrow2" style="position: absolute;left:470px;transform:rotate(6deg); width:50px;visibility:hidden;"
+        src="Images/11.png" />
+      <img id="a8" style="position: absolute; left: 225px; top: 150px;width:30px;transform:rotate(12deg);"
+        src="Images/bitt.png" />
+      <img id="a14" style="position: absolute; left: 165px; top: 100px;width:20px;" src="Images/cap.png" />
+      <img id="a4" style="position: absolute; left: 100px; top: 130px;width:140px;" title="Dial Guage"
+        src="Images/svs.png" />
+      <img id="a5"
+        style="position: absolute; left: 163px; top: 170px;width:15px;transform-origin: 43% 63%;transform: rotate(30deg);"
+        src="Images/2.1.png" />
+      <img id="a6" style="position: absolute; left: 195px; top: 181px;width:1.8px;" src="Images/ndright.png" />
+      <img id="a7" style="position: absolute; left: 143px; top: 181px;width:1.8px;" src="Images/ndleft.png" />
+      <p id="cann"
+        style="position:absolute;top: 210px; left:535px; font-family:verdana; font-size:14px;visibility:hidden;">Wind
+        direction</p>
+
+      <div id="m10"
+        style="position:absolute;width: 245px;height:0.5px;left: 238px;top: 225px;z-index:1005;background-color: black;transform: rotate(15deg);-ms-transform: rotate(15deg);-webkit-transform: rotate(30deg);">
+      </div>
+      <div id="m9"
+        style="position: absolute;width: 252px;height: 0.5px;left: 205px;top: 299px;z-index: 1005;background-color: black;transform: rotate(45deg);-ms-transform: rotate(45deg);-webkit-transform: rotate(5deg);">
+      </div>
+      <span id="note1" class="tooltip"
+        style="font-family:verdana; font-size:18px;border-bottom:1px dotted ; color:red; position:absolute; visibility: hidden;">
+        <span id="10" class="tooltiptext"
+          style="font-family:verdana; font-size:14px;color:white;width:400px;left:-630px;top:300px;text-align: justify;">Note:<br><br>1.Hold
+          the anemometer atleast 1.5m from the body so that it does not block the air passing through the
+          body.</br>2.Allowing the anemometer to hang vertically and aligned with the axis of airway.</br></br>
+          <input id="ok" type="button" name="ok" value="OK" />&nbsp;&nbsp;&nbsp;</span>
+      </span>
+    </div>
+
+    <!--step2-->
+    <div class="simsubscreen" id="canvas2" style="visibility:hidden">
+      <strong id="titlestep" class="incanvas">STEP </strong>
+      <span class="circlebg" id="stepnumber">&nbsp;2&nbsp;</span>
+      <p id="pumptext" class="steptext" style="font-family:verdana; font-size:14px;">Start the stopwatch and after 120
+        seconds press the clutch lever and stop the stopwatch simultaneously to take the reading.</p>
+      <p id="trial"
+        style="text-transform: uppercase;visibility :hidden;font-weight: bold;font-family:verdana;position:absolute;left: 660px;top:20px; ">
+        <strong>Trial 1 </strong></p>
+      <img id="a14-1" style="position: absolute; left: 622px; top: 65px;width:20px;" src="Images/cap.png" />
+      <img id="a13-1" style="position: absolute; left: 622px; top: 308px;width:20px;" src="Images/cap.png" />
+
+      <img id="a22" style="position: absolute; left: -15px; top: 60px;width:522px;height:367px;visibility:hidden;"
+        src="Images/tunnel2.png" />
+      <img id="a11" style="position: absolute; left: 560px; top: 330px;width:140px;" title="Stopwatch"
+        src="Images/swh1.png" />
+      <img id="a88" style="position: absolute; left: 675px; top: 100px;width:30px;transform:rotate(10deg);"
+        src="Images/bitt.png" />
+      <img id="a33" style="position: absolute; left: 562px; top: 90px;width:133px;" src="Images/svs.png" />
+      <img id="a44"
+        style="position: absolute; left: 55px; top: 180px;width:115px;height:127px;z-index: 100;visibility:hidden;"
+        title="Vane Anemometer" src="Images/21.png" />
+      <img id="a41" style="position: absolute; left: 68px; top: 187px;width:25px;z-index: 100;visibility:hidden;"
+        src="Images/fan1.png" />
+
+      <img id="arroww"
+        style="position: absolute; width:25px;visibility:hidden;left: 105px; top: 220px;transform:rotate(6deg);"
+        src="Images/11.png" />
+      <img id="a55" style="position: absolute; left: 623px; top: 120px;width:15px;transform-origin: 43% 63%;"
+        src="Images/2.1.png" />
+      <img id="a66" style="position: absolute; left: 603px; top: 135px;width:2.3px;" src="Images/ndright.png" />
+      <img id="a77" style="position: absolute; left: 653px; top: 135px;width:2px;transform-origin: 70% 94%;"
+        src="Images/ndleft.png" />
+      <p id="can12" style="position:absolute;top: 240px; left:575px; font-family:verdana; font-size:14px;">
+        Reading=_____.</p>
+      <p id="can22" style="position:absolute;top: 460px; left:590px; font-family:verdana; font-size:14px;">Time=_____s.
+      </p>
+      <img id="a99" style="position: absolute; left: 628.5px; top: 368px; width: 4px; transform-origin: 70% 94%;"
+        onclick="start();" src="Images/ndswh.png">
+      <span id="note1" class="tooltip"
+        style="font-family:verdana; font-size:18px;border-bottom:1px dotted ; color:red; position:absolute; visibility: hidden;">
+        <span id="01" class="tooltiptext"
+          style="font-family:verdana; font-size:14px;color:white;width:400px;left:-145px;top:150px;text-align: justify;">Note:<br><br>1.When
+          the outer needle complete one round, it is 100m and the right side circle needle will move to 1.</br>2.When
+          the needle of right side circle complete one round, it is 1000m and needle in the left side circle will move
+          to 1.</br></br>
+          <input id="ok1" type="button" name="ok" value="OK" />&nbsp;&nbsp;&nbsp;</span>
+      </span>
+      <p id="cann1"
+        style="position:absolute;top: 210px; left:135px; font-family:verdana; font-size:14px;visibility:hidden;">Wind
+        direction</p>
+
+      <!--Path Elements Begin-->
+      <div id='line11' class='linepath' style="position:absolute;left:78px;top:200px;height:0px;"></div>
+      <div id='sc11' class='scd' style="position:absolute;left:78px;top:330px;"></div>
+      <div id='sc1mask1' class='scm' style="position:absolute;left:78px;top:330px;"></div>
+      <div id='line21' class='linepath' style="position:absolute;left:190px;top:330px;height:0px;"></div>
+      <div id='sc21' class='scu' style="position:absolute;left:190px;top:145px;"></div>
+      <div id='sc2mask1' class='scm' style="position:absolute;left:190px;top:145px;"></div>
+      <div id='line31' class='linepath' style="position:absolute;left:302px;top:200px;height:0px;"></div>
+      <div id='sc31' class='scd' style="position:absolute;left:302px;top:330px;"></div>
+      <div id='sc3mask1' class='scm' style="position:absolute;left:302px;top:330px;"></div>
+      <div id='line41' class='linepath' style="position:absolute;left:414px;top:330px;height:0px;"></div>
+      <!--Path Elements End-->
+    </div>
+
+    <div class="simsubscreen" id="canvas3" style="visibility:hidden;">
+      <strong class="incanvas" id="ob">
+        <h3>Observations: </h3>
+      </strong>
+      <p id="trial1"
+        style="text-transform: uppercase;visibility :hidden;font-weight: bold;font-family:verdana;position:absolute;left: 660px;top:20px; ">
+        <strong>Trial 1 </strong></p>
+      <table id="table" border=1 style="text-align:center; font-size:14px; width:700px;">
+        <tr>
+          <td style="padding:10px;">Initial Reading(I)</br>(m)</td>
+          <td style="padding:10px;">Final Reading(F) (m)</td>
+          <td style="padding:10px;">Distance</br>(F-I)</br>(m)</td>
+          <td style="padding:10px;">Time taken for traverse (T) (s)</td>
+          <td style="padding:10px;">Air Velocity V=D/T (m/sec)</td>
+          <td style="padding: 10px;">Air Quantity Q=A*V (m<sup>3</sup>/s)
+        </tr>
+
+        <tr>
+          <td style="padding:10px;">00</td>
+          <td id="row0" style="padding:10px;"></td>
+          <td id="row1" style="padding:10px;"></td>
+          <td id="row2" style="padding:10px;"></td>
+          <td id="row3" style="padding:10px;"></td>
+          <td id="row4" style="padding:10px;"></td>
+        </tr>
+      </table>
+      </br></br>
+
+      <label style="font-size:14px;">Area of cross section (A)=4.8m*3m = 14.4 m<sup>2</sup>.</label></td></br></br>
+      <label style="font-size:14px;">Air Velocity(v=D/T) (m/s) =</label>
+      <input id="output11" type="number" autocomplete="off" style=" border:none; border-bottom: 1px solid; width:55px;"
+        required>&nbsp;&nbsp;
+      <input id="check11" type="button" name="Check" value="Check"
+        style="position:absolute; left:280px;" />&nbsp;&nbsp;&nbsp;
+      <input id="rt11" type="button" name="Formula" value="Result"
+        style="position:absolute; left:350px;visibility:hidden;" /></br>
+      </br>
+
+      <p id="rf2" style="position:absolute; left:260px; top:230px; color:#32CD32;  visibility:hidden; font-size:22px;">
+        &#10004;</p>
+      <p id="wf2" style="position:absolute; left:260px; top:230px; color:red;  visibility:hidden; font-size:22px;">
+        &#10008;</p>
+
+      <label style="font-size:14px;">Air Quantity(Q=A*V) (m<sup>3</sup>/s)=</label>
+      <input id="output12" type="number" autocomplete="off" style=" border:none; border-bottom: 1px solid; width:55px;"
+        required>&nbsp;&nbsp;
+      <input id="check12" type="button" name="Check" value="Check"
+        style="position:absolute; left:300px;" />&nbsp;&nbsp;&nbsp;
+      <input id="rt12" type="button" name="Formula" value="Result"
+        style="position:absolute; left:370px;visibility:hidden;" /></br>
+      </br>
+
+      <p id="rf12" style="position:absolute; left:275px; top:270px; color:#32CD32;  visibility:hidden; font-size:22px;">
+        &#10004;</p>
+      <p id="wf12" style="position:absolute; left:275px; top:270px; color:red;  visibility:hidden; font-size:22px;">
+        &#10008;</p>
+    </div>
+
+    <div class="simsubscreen" id="canvas4" style="visibility:hidden">
+      <strong id="titlestep" class="incanvas">STEP </strong>
+      <span class="circlebg" id="stepnumber">&nbsp;3&nbsp;</span>
+      <p id="pumptext" class="steptext" style="font-family:verdana; font-size:14px;">Start the stopwatch and after 120
+        seconds press the clutch lever and stop the stopwatch simultaneously to take the reading.</p>
+      <p id="trial2"
+        style="text-transform: uppercase;visibility :hidden;font-weight: bold;font-family:verdana;position:absolute;left: 660px;top:20px; ">
+        <strong>Trial 2 </strong></p>
+      <img id="a14-2" style="position: absolute; left: 622px; top: 65px;width:20px;" src="Images/cap.png" />
+      <img id="a13-2" style="position: absolute; left: 622px; top: 308px;width:20px;" src="Images/cap.png" />
+
+      <img id="a22-1" style="position: absolute; left: -15px; top: 60px;width:522px;height:367px;"
+        src="Images/tunnel2.png" />
+      <img id="a11-1" style="position: absolute; left: 560px; top: 330px;width:140px;" title="Stopwatch"
+        src="Images/swh1.png" />
+      <img id="a88-1" style="position: absolute; left: 675px; top: 100px;width:30px;transform:rotate(10deg);"
+        src="Images/bitt.png" />
+      <img id="a33-1" style="position: absolute; left: 562px; top: 90px;width:133px;" title="Dial Guage"
+        src="Images/svs.png" />
+      <img id="a44-1" style="position: absolute; left: 55px; top: 180px;width:115px;z-index:100;"
+        title="Vane Anemometer" src="Images/21.png" />
+      <img id="a41-1" style="position: absolute; left: 68px; top: 187px;width:25px;z-index: 100;"
+        src="Images/fan1.png" />
+      <img id="arroww-1"
+        style="position: absolute; width:25px;visibility:hidden;left: 105px; top: 220px;transform:rotate(6deg);"
+        src="Images/11.png" />
+      <img id="a55-1" style="position: absolute; left: 623px; top: 120px;width:15px;transform-origin: 43% 63%;"
+        src="Images/2.1.png" />
+      <img id="a66-1" style="position: absolute; left: 603px; top: 135px;width:2.3px;" src="Images/ndright.png" />
+      <img id="a77-1" style="position: absolute; left: 653px; top: 135px;width:2px;transform-origin: 70% 94%;"
+        src="Images/ndleft.png" />
+      <p id="can12-1" style="position:absolute;top: 240px; left:575px; font-family:verdana; font-size:14px;">
+        Reading=_____.</p>
+      <p id="can22-1" style="position:absolute;top: 460px; left:590px; font-family:verdana; font-size:14px;">
+        Time=_____s.</p>
+      <img id="a99-1" style="position: absolute; left: 628.5px; top: 368px; width: 4px; transform-origin: 70% 94%;"
+        onclick="start();" src="Images/ndswh.png">
+      <!--Path Elements Begin-->
+      <div id='line12' class='linepath' style="position:absolute;left:78px;top:200px;height:0px;"></div>
+      <div id='sc12' class='scd' style="position:absolute;left:78px;top:330px;"></div>
+      <div id='sc1mask2' class='scm' style="position:absolute;left:78px;top:330px;"></div>
+      <div id='line22' class='linepath' style="position:absolute;left:190px;top:330px;height:0px;"></div>
+      <div id='sc22' class='scu' style="position:absolute;left:190px;top:145px;"></div>
+      <div id='sc2mask2' class='scm' style="position:absolute;left:190px;top:145px;"></div>
+      <div id='line32' class='linepath' style="position:absolute;left:302px;top:200px;height:0px;"></div>
+      <div id='sc32' class='scd2' style="position:absolute;left:302px;top:330px;"></div>
+      <div id='sc32cont' style="position:absolute;left:302px;top:330px;width:114px;z-index: 51;background-color:white">
+        <div id='sc32' class='scd'></div>
+      </div>
+      <div id='sc3mask2' class='scm' style="position:absolute;left:302px;top:330px;"></div>
+      <div id='line42' class='linepath' style="position:absolute;left:414px;top:330px;height:0px;"></div>
+      <div id='line52' class='linepath2' style="position:absolute;left:414px;top:200px;height:0px;"></div>
+      <div id='line62' class='linepath2' style="position:absolute;left:302px;top:330px;height:0px;"></div>
+      <!--Path Elements End-->
+    </div>
+
+    <div class="simsubscreen" id="canvas5" style="visibility:hidden;">
+      <p id="trial3"
+        style="text-transform: uppercase;visibility :hidden;font-weight: bold;font-family:verdana;position:absolute;left: 660px;top:20px; ">
+        <strong>Trial 2 </strong></p>
+      <strong class="incanvas" id="ob">
+        <h3>Observations: </h3>
+      </strong>
+      <table id="table" border=1 style="text-align:center; font-size:14px; width:700px;">
+        <tr>
+          <td style="padding:10px;">Initial Reading(I)</br>(m)</td>
+          <td style="padding:10px;">Final Reading(F) (m)</td>
+          <td style="padding:10px;">Distance</br>(F-I)</br>(m)</td>
+          <td style="padding:10px;">Time taken for traverse (T) (s)</td>
+          <td style="padding:10px;">Air Velocity V=D/T (m/sec)</td>
+          <td style="padding:10px;">Air Quantity Q=A*V (m<sup>3</sup>/s)</td>
+        </tr>
+
+        <tr>
+          <td style="padding:10px;">00</td>
+          <td id="rw0" style="padding:10px;"></td>
+          <td id="rw1" style="padding:10px;"></td>
+          <td id="rw2" style="padding:10px;"></td>
+          <td id="rw3" style="padding:10px;"></td>
+          <td id="rw4" style="padding:10px;"></td>
+
+        </tr>
+      </table>
+      </br></br>
+      <label style="font-size:14px;">Area of cross section (A)=4.8m*3m= 14.4 m<sup>2</sup>.</label></br></br>
+      <label style="font-size:14px;">Air Velocity(v=D/T) (m/s) =</label>
+      <input id="output111" type="number" autocomplete="off" style=" border:none; border-bottom: 1px solid; width:55px;"
+        required>&nbsp;&nbsp;
+      <input id="check111" type="button" name="Check" value="Check"
+        style="position:absolute; left:280px;" />&nbsp;&nbsp;&nbsp;
+      <input id="rt111" type="button" name="Formula" value="Result"
+        style="position:absolute; left:350px;visibility:hidden;" /></br>
+      </br>
+      <p id="rf22" style="position:absolute; left:260px; top:230px; color:#32CD32;  visibility:hidden; font-size:22px;">
+        &#10004;</p>
+      <p id="wf22" style="position:absolute;  left:260px; top:230px; color:red;  visibility:hidden; font-size:22px;">
+        &#10008;</p>
+      <label style="font-size:14px;">Air Quantity(Q=A*V) (m<sup>3</sup>/s)=</label>
+      <input id="output122" type="number" autocomplete="off" style=" border:none; border-bottom: 1px solid; width:55px;"
+        required>&nbsp;&nbsp;
+      <input id="check122" type="button" name="Check" value="Check"
+        style="position:absolute; left:295px;" />&nbsp;&nbsp;&nbsp;
+      <input id="rt122" type="button" name="Formula" value="Result"
+        style="position:absolute; left:370px;visibility:hidden;" /></br></br>
+      <p id="rf122"
+        style="position:absolute; left:275px; top:270px; color:#32CD32;  visibility:hidden; font-size:22px;">&#10004;
+      </p>
+      <p id="wf122" style="position:absolute; left:275px; top:270px; color:red;  visibility:hidden; font-size:22px;">
+        &#10008;</p>
+    </div>
+
+    <div class="simsubscreen" id="canvas6" style="visibility:hidden">
+      <strong id="titlestep" class="incanvas">STEP </strong>
+      <span class="circlebg" id="stepnumber">&nbsp;4&nbsp;</span>
+      <p id="pumptext" class="steptext" style="font-family:verdana; font-size:14px;">Start the stopwatch and after 120
+        seconds press the clutch lever and stop the stopwatch simultaneously to take the reading.</p>
+      <p id="trial4"
+        style="text-transform: uppercase;visibility :hidden;font-weight: bold;font-family:verdana;position:absolute;left: 660px;top:20px; ">
+        <strong>Trial 3 </strong></p>
+      <img id="a14-3" style="position: absolute; left: 622px; top: 65px;width:20px;" src="Images/cap.png" />
+      <img id="a13-3" style="position: absolute; left: 622px; top: 308px;width:20px;" src="Images/cap.png" />
+
+      <img id="a22-2" style="position: absolute; left: -15px; top: 60px;width:522px;height:367px;"
+        src="Images/tunnel2.png" / />
+      <img id="a11-2" style="position: absolute; left: 560px; top: 330px;width:140px;" title="Stopwatch"
+        src="Images/swh1.png" />
+      <img id="a88-2" style="position: absolute; left: 675px; top: 100px;width:30px;transform:rotate(10deg);"
+        src="Images/bitt.png" />
+      <img id="a33-2" style="position: absolute; left: 562px; top: 90px;width:133px;" title="Dial Guage"
+        src="Images/svs.png" />
+      <img id="a44-2" style="position: absolute; left: 55px; top: 180px;width:115px;z-index: 100;"
+        title="Vane Anemometer" src="Images/21.png" />
+      <img id="a41-2" style="position: absolute; left: 68px; top: 187px;width:25px;z-index: 100;"
+        src="Images/fan1.png" />
+      <img id="arroww-2"
+        style="position: absolute; width:25px;visibility:hidden;left: 105px; top: 220px;transform:rotate(6deg);"
+        src="Images/11.png" />
+      <img id="a55-2" style="position: absolute; left: 623px; top: 120px;width:15px;transform-origin: 43% 63%;"
+        src="Images/2.1.png" />
+      <img id="a66-2" style="position: absolute; left: 603px; top: 135px;width:2.3px;" src="Images/ndright.png" />
+      <img id="a77-2" style="position: absolute; left: 653px; top: 135px;width:2px;transform-origin: 70% 94%;"
+        src="Images/ndleft.png" />
+      <p id="can12-2" style="position:absolute;top: 240px; left:575px; font-family:verdana; font-size:14px;">
+        Reading=_____.</p>
+      <p id="can22-2" style="position:absolute;top: 460px; left:590px; font-family:verdana; font-size:14px;">
+        Time=_____s.</p>
+      <img id="a99-2" style="position: absolute; left: 628.5px; top: 368px; width: 4px; transform-origin: 70% 94%;"
+        onclick="start();" src="Images/ndswh.png">
+      <div id='line13' class='linepath' style="position:absolute;left:78px;top:200px;height:0px;"></div>
+      <div id='sc13' class='scd' style="position:absolute;left:78px;top:330px;"></div>
+      <div id='sc1mask3' class='scm' style="position:absolute;left:78px;top:330px;"></div>
+      <div id='line23' class='linepath' style="position:absolute;left:190px;top:330px;height:0px;"></div>
+      <div id='sc23' class='scu' style="position:absolute;left:190px;top:145px;"></div>
+      <div id='sc2mask3' class='scm' style="position:absolute;left:190px;top:145px;"></div>
+      <div id='line33' class='linepath' style="position:absolute;left:302px;top:200px;height:0px;"></div>
+      <div id='sc33' class='scd' style="position:absolute;left:302px;top:330px;"></div>
+      <div id='sc3mask3' class='scm' style="position:absolute;left:302px;top:330px;"></div>
+      <div id='line43' class='linepath' style="position:absolute;left:414px;top:330px;height:0px;"></div>
+      <div id='line53' class='linepath2' style="position:absolute;left:414px;top:200px;height:0px;"></div>
+    </div>
+
+    <div class="simsubscreen" id="canvas7" style="visibility:hidden;">
+      <strong class="incanvas" id="ob">
+        <h3>Observations: </h3>
+      </strong>
+      <table id="table" border=1 style="text-align:center; font-size:14px; width:700px;">
+        <p id="trial5"
+          style="text-transform: uppercase;visibility :hidden;font-weight: bold;font-family:verdana;position:absolute;left: 660px;top:20px; ">
+          <strong>Trial 3 </strong></p>
+
+        <tr>
+          <td style="padding:10px;">Initial Reading(I)</br>(m)</td>
+          <td style="padding:10px;">Final Reading(F) (m)</td>
+          <td style="padding:10px;">Distance</br>(F-I)</br>(m)</td>
+          <td style="padding:10px;">Time taken for traverse (T) (s)</td>
+          <td style="padding:10px;">Air Velocity V=D/T (m/sec)</td>
+          <td style="padding: 10px;">Air Quantity Q=A*V (m<sup>3</sup>/s)
+        </tr>
+
+        <tr>
+          <td style="padding:10px;">00</td>
+          <td id="r0" style="padding:10px;"></td>
+          <td id="r1" style="padding:10px;"></td>
+          <td id="r2" style="padding:10px;"></td>
+          <td id="r3" style="padding:10px;"></td>
+          <td id="r4" style="padding:10px;"></td>
+
+        </tr>
+      </table>
+      </br></br>
+
+      <label style="font-size:14px;">Area of cross section (A)=4.8m*3m = 14.4 m<sup>2</sup>.</label></br></br>
+      <label style="font-size:14px;">Air Velocity(v=D/T) (m/s) =</label>
+      <input id="outputq" type="number" autocomplete="off" style=" border:none; border-bottom: 1px solid; width:55px;"
+        required>&nbsp;&nbsp;
+      <input id="checkq" type="button" name="Check" value="Check"
+        style="position:absolute; left:280px;" />&nbsp;&nbsp;&nbsp;
+      <input id="rtq" type="button" name="Formula" value="Result"
+        style="position:absolute; left:350px;visibility:hidden;" /></br>
+      </br>
+      <p id="rfq" style="position:absolute; left:260px; top:230px; color:#32CD32;  visibility:hidden; font-size:22px;">
+        &#10004;</p>
+      <p id="wfq" style="position:absolute; left:260px; top:230px; color:red;  visibility:hidden; font-size:22px;">
+        &#10008;</p>
+      <label style="font-size:14px;">Air Quantity(Q=A*V) (m<sup>3</sup>/s)=</label>
+      <input id="outputp" type="number" autocomplete="off" style=" border:none; border-bottom: 1px solid; width:55px;"
+        required>&nbsp;&nbsp;
+      <input id="checkp" type="button" name="Check" value="Check"
+        style="position:absolute; left:295px;" />&nbsp;&nbsp;&nbsp;
+      <input id="rtp" type="button" name="Formula" value="Result"
+        style="position:absolute; left:370px;visibility:hidden;" /></br>
+      </br></br>
+
+      <p id="rfp" style="position:absolute;left:275px;top:270px; color:#32CD32;  visibility:hidden; font-size:22px;">
+        &#10004;</p>
+      <p id="wfp" style="position:absolute;left:275px;top:270px; color:red;  visibility:hidden; font-size:22px;">
+        &#10008;</p>
+
+    </div>
+
+
+    <div class="simsubscreen" id="canvas8" style="visibility:hidden;">
+      <strong class="incanvas" id="ob">
+        <h3>
+          calculations: </h3>
+      </strong>
+
+      <table id="table" border=1 style="text-align:center; font-size:14px; width:700px;">
+        <tr>
+          <td style="padding:10px;">Initial Reading(I)</br>(m)</td>
+          <td style="padding:10px;">Final Reading(F) (m)</td>
+          <td style="padding:10px;">Distance</br>(F-I)</br>(m)</td>
+          <td style="padding:10px;">Time taken for traverse (T) (s)</td>
+          <td style="padding:10px;">Air Velocity V=D/T (m/sec)</td>
+          <td style="padding:10px;">Air Quantity Q=A*V (m<sup>3</sup>/s)</td>
+          <td style="padding:10px;">Average Air Velocity(m/s) </td>
+          <td style="padding:10px;">Average Air Quantity Q=A*V (m<sup>3</sup>/s)</td>
+
+        </tr>
+
+        <tr>
+          <td style="padding:10px;">00</td>
+          <td id="ro0" style="padding:10px;"></td>
+          <td id="ro1" style="padding:10px;"></td>
+          <td id="ro2" style="padding:10px;"></td>
+          <td id="ro3" style="padding:10px;"></td>
+          <td id="ro4" style="padding:10px;"></td>
+          <td style="padding:10px;" rowspan="3">1.8012</td>
+          <td style="padding:10px;" rowspan="3">27.83</td>
+
+        </tr>
+
+        <tr>
+          <td style="padding:10px;">00</td>
+          <td id="rr0" style="padding:10px;"></td>
+          <td id="rr1" style="padding:10px;"></td>
+          <td id="rr2" style="padding:10px;"></td>
+          <td id="rr3" style="padding:10px;"></td>
+          <td id="rr4" style="padding:10px;"></td>
+        </tr>
+
+        <tr>
+          <td style="padding:10px;">00</td>
+          <td id="re0" style="padding:10px;"></td>
+          <td id="re1" style="padding:10px;"></td>
+          <td id="re2" style="padding:10px;"></td>
+          <td id="re3" style="padding:10px;"></td>
+          <td id="re4" style="padding:10px;"></td>
+        </tr>
+      </table>
+      </br></br>
+
+      <label style="font-size:14px;">Method factor=0.85.</label></br></br>
+      <label style="font-size:14px;">Actual velocity=</label>
+      <input id="output1" type="number" autocomplete="off" style=" border:none; border-bottom: 1px solid; width:55px;"
+        required>&nbsp;&nbsp;
+      <input id="check1" type="button" name="Check" value="Check" />&nbsp;&nbsp;&nbsp;
+      <input id="rs" type="button" name="result" value="Result" style="visibility:hidden;" /></br>
+      <p id="can331"
+        style="position:absolute;top: 410px; left:1px; font-family:verdana; font-size:14px;visibility:hidden;color:red;">
+        Actual velocity=1.531 (m/s).</p>
+      </br></br>
+
+      <span id="18" class="tooltip1"
+        style="border-bottom:1px dotted ; color:red;text-align:justify;position:absolute;left:350px;top:380px;visibility:hidden;">Formula
+        <span class="tooltiptext1" style="left:50px;">
+          Actual velocity=Method factor*Average velocity
+        </span>
+      </span>
+
+      <p id="rt" style="position:absolute; left:280px; top:350px; color:#32CD32;  visibility:hidden; font-size:22px;">
+        &#10004;</p>
+      <p id="w2" style="position:absolute; left:320px; top:350px; color:red;  visibility:hidden; font-size:22px;">
+        &#10008;</p>
+
+    </div>
+    <div class="simsubscreen" id="canvas9" style="visibility:hidden;">
+      <strong class="incanvas" id="ob">
+        <h3>
+          Result: </h3>
+      </strong>
+      <label style="font-size:14px;">1.The mean air velocity using anemometer=1.8012 m/s.</label></br></br>
+      <label style="font-size:14px;">2.The mean air quantity using anemometer=27.83 m<sup>3</sup>/s.</label></br></br>
+      <strong>
+        <h3>Conclusion:</h3>
+      </strong>
+      <label style="font-size:14px;">Actual velocity=1.531 m/s.</label></br></br>
+    </div>
+
+    <div id="questDiv"
+      style="position:absolute; background-color:grey; color:white; padding:7.5px; border-radius:5px; visibility:hidden; text-align:justify;">
+      <p id="q"></p><select id="answer">
+      </select>
+      <p id="a"></p>
+    </div>
+
+    <!--next  Arrow	-->
+    <div id="nav">
+      <img id="nextButton" onclick="navNext();" src="Images/Next.png" />
+    </div>
+
+    <!--Blinking Arrow	-->
+    <img class="" id="arrow1" style="visibility:hidden" src="Images/arrow1.png" />
+
+    <div id="copyright"> &copy; 2020 SOLVE - The Virtual Lab @ NITK Surathkal, Department of Water Resources & Ocean
+      Engineering</div>
+</body>
+
+</html>

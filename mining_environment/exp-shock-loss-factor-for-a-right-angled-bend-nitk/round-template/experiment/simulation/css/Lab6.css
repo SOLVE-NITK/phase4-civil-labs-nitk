@@ -1,0 +1,443 @@
+html
+{
+    -moz-user-select     : none;
+    -khtml-user-select   : none;
+    -webkit-user-select  : none;
+    -o-user-select       : none;
+    user-select          : none;
+}
+
+#simscreen
+{
+position: relative;
+left:0px;
+top:0px;
+height: 600px; 
+width:800px;
+border:solid 1px;
+}
+
+#copyright{
+position: absolute;
+left:50px;
+top: 580px;
+font-family: verdana; 
+font-size:12px
+}
+
+#title{
+position:relative;
+left: 0px;
+top: 0px;
+height:40px;
+font-size: 24px;
+text-align:center;
+background-color: black;
+font-family: verdana;
+color: White;
+text-transform: uppercase; 
+}
+
+#title h3{
+padding-top:2px;
+margin:0px;}
+
+#question-div{
+	position: absolute;
+	left:300px;
+	top:350px;
+	width:300px;
+	height:120px;
+	border:solid 1px gray;
+	background-color: gray;
+	filter: alpha(opacity=55);
+	color:white;
+	visibility:hidden;
+}
+
+.img_wr1 {
+}
+.img_description1 {
+         background-color: white;
+    font-color: black;
+    font-size: 80%;
+    position: absolute;
+    padding: 5px 5px 5px 5px;
+/*    bottom: -1.6em;
+*/    white-space: nowrap;
+/*    box-shadow: 1px 1px 3px 1px;
+*/    opacity: 0;
+    border: 1px solid black;
+    z-index: 99999;
+    visibility: hidden;
+}
+.img_wr1:hover .img_description1 {
+  visibility: visible;
+  opacity: 2;
+}
+
+.img_wrap {
+}
+
+.img_description {
+    background-color: white;
+    font-color: black;
+    font-size: 80%;
+    position: absolute;
+    padding: 5px 5px 5px 5px;
+/*    bottom: -1.6em;
+*/    white-space: nowrap;
+/*    box-shadow: 1px 1px 3px 1px;
+*/    opacity: 0;
+    border: 1px solid black;
+    z-index: 99999;
+    visibility: hidden;
+}
+
+.img_wrap:hover .img_description {
+  visibility: visible;
+  opacity: 2;
+}
+.simsubscreen
+{
+position:absolute;
+left: 50px;
+top: 50px;
+height:530px;
+width:745px;
+
+}
+
+.incanvas
+{
+margin:5px 0 0 5px;
+padding:0;
+}
+#nextButton{
+    position: absolute;
+    left: 750px;
+    top: 530px;
+cursor:pointer;
+}
+
+.steptext{
+display:inline;
+}
+
+.circlebg
+{
+border-radius:100%;
+font-size:25px;
+color:#fff;
+text-align:center;
+background:#000
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+font-family: verdana;
+font-size:14px;
+ visibility: hidden;
+ width: 230px;
+ background-color: black;
+ color: black;
+ border-radius: 6px;
+ padding: 10px 10px 10px 10px;
+visibility: visible;
+
+ /* Position the tooltip */
+ position: absolute;
+ left:200px;
+ top:20px;
+ z-index: 100;
+}
+
+.tooltip1 {
+  position: relative;
+  display: inline-block;
+/*  border-bottom: 1px dotted black;
+*/
+}
+
+.tooltip1 .tooltiptext1 {
+  visibility: hidden;
+  width: 400px;
+ /*background-color: grey;*/
+  color: #fff;
+
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+margin-left: -70px;
+margin-top: -30px;
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip1:hover .tooltiptext1 {
+
+  visibility: visible;
+}
+
+.input {
+    position: absolute;
+}
+
+.tooltip1 {
+    display: none;
+    padding: 5px;
+
+}
+
+.input:hover .tooltip1 {
+    background: black;
+    border-radius: 3px;
+    bottom: 30px;
+    color: white;
+    display: inline;
+    height: 20px;
+    left: 0;
+    line-height: 20px;
+
+}
+
+
+#m1,#m2,#m3,#m4,#m5,#m6{
+			opacity: 0;
+			transition: 0.05s linear; 
+			background-color: white;
+			position:absolute;
+			z-index:1000;
+			top:-25px;
+		}
+
+#n1,#n2,#n3,#n4,#n5,#n6{
+			opacity: 0;
+			transition: 0.05s linear; 
+			background-color: white;
+			position:absolute;
+			z-index:1000;
+			top:-25px;
+		}
+
+ .popup
+    {
+      border-radius:5px;
+      background-color:black;
+      color:white;
+      padding:5px;
+    }
+    .tooltip {
+      position: initial;
+      display: inline-block;
+      border-bottom: 1px dotted black;
+      color:red;
+    }
+    .tooltip .tooltiptext {
+      visibility: hidden;
+      width: 500px;
+      background-color: black;
+      color: #fff;  padding: 10px 10px 10px 10px;
+      border-radius: 6px;
+      position: absolute;
+      z-index: 100;t
+    }
+    .tooltip:hover .tooltiptext {
+      visibility: visible;
+    }
+
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+  
+
+}
+@-webkit-keyframes mover{
+ 0%{ transform:rotate(0deg)}
+ 100%{ transform:rotate(-160deg)}
+}
+@keyframes mover{
+  0%{ transform:rotate(0deg)}
+  100%{ transform:rotate(-160deg)}
+}
+@-webkit-keyframes moven{
+ 0%{ transform:rotate(-70deg)}
+ 100%{ transform:rotate(-42deg)}
+}
+@keyframes moven{
+  0%{ transform:rotate(-70deg)}
+  100%{ transform:rotate(-42deg)}
+}
+
+@-webkit-keyframes movenn{
+ 0%{ transform:rotate(-70deg)}
+ 100%{ transform:rotate(-32deg)}
+}
+@keyframes movenn{
+  0%{ transform:rotate(-70deg)}
+  100%{ transform:rotate(-32deg)}
+}
+@keyframes moves {
+ 0% {left:-30px; }
+  100% { left:147px;}
+  }
+@-webkit-keyframes moves {
+  0% { left:-30px;}
+  100% { left:147px;}
+}
+@keyframes move1 {
+ 0% {left:40px; }
+  100% { left:150px;}
+  }
+@-webkit-keyframes move1 {
+  0% { left:40px;}
+  100% { left:150px;}
+}
+
+@keyframes move1_1 {
+ 0% {left:40px; }
+  100% { left:140px;}
+  }
+@-webkit-keyframes move1_1 {
+  0% { left:40px;}
+  100% { left:140px;}
+}
+@-webkit-keyframes move2{
+ 0%{left:150px; transform:rotate(0deg)}
+ 100%{left:150px; transform:rotate(28deg)}
+}
+@keyframes move2{
+  0%{left:150px; transform:rotate(0deg)}
+  100%{left:150px; transform:rotate(28deg)}
+}
+
+@-webkit-keyframes move3{
+ 0%{left:150px; transform:rotate(28deg)}
+ 100%{left:190px; transform:rotate(28deg)}
+}
+@keyframes move3{
+  0%{left:150px; transform:rotate(28deg)}
+  100%{left:190px; transform:rotate(28deg)}
+}
+
+
+@keyframes movess {
+  0% {left:147px;}
+  100% { left:260px;}
+  }
+
+@-webkit-keyframes movess {
+  0% { left:147px;}
+  100% { left:260px;}
+}
+@keyframes movese {
+  0% {left:260px;}
+  100% { left:355px;}
+  }
+@-webkit-keyframes movese {
+  0% { left:260px;}
+  100% { left:355px;}
+}
+@keyframes movep {
+	0%{transform: rotate(-40deg);}
+	100%{transform :rotate(-59.5deg);}
+  }
+@-webkit-keyframes movep {
+	0%{transform: rotate(-40deg);}
+	100%{transform :rotate(-59.5deg);}
+}
+@keyframes movehand1 {
+	0% {left: 130px; top: 150px;}
+  100% { left: 200px; top: 139px;}
+  }
+@-webkit-keyframes movehand1 {
+	0% {left: 130px; top: 150px;}
+	100% { left: 200px; top: 139px;}
+}
+@keyframes movehand11 {
+	0%{left: 200px; top: 139px;}
+	100% { left: 225px; top: 202px;}
+  }
+@-webkit-keyframes movehand11 {
+	0% {left: 200px; top: 139px;}
+	100% { left: 225px; top: 202px;}
+}
+@keyframes movehand2 {
+	0% {left: 280px; top: 150px;}
+	100% { left: 213px; top: 140px;}
+}
+@-webkit-keyframes movehand2 {
+	0% {left: 280px; top: 150px;}
+	100% { left: 213px; top: 140px;}
+}
+@keyframes movepp {
+	0%{transform: rotate(-45deg);}
+	100%{transform :rotate(-60.8deg);}
+}
+@-webkit-keyframes movepp {
+    0%{transform: rotate(-45deg);}
+	100%{transform :rotate(-60.8deg);}
+}
+@keyframes movehand22 {
+	0% {left: 213px; top: 140px;}
+	100% {left:233px; top:197px; }
+}
+@-webkit-keyframes movehand22 {
+	0% {left: 213px; top: 140px;}
+	100% {left:233px; top:197px; }
+}
+@keyframes movep1 {
+	0%{transform: rotate(-30deg);}
+	100%{transform :rotate(-12deg);}
+}
+@-webkit-keyframes movep1 {
+	0%{transform: rotate(-30deg);}
+	100%{transform :rotate(-12deg);}
+}
+@keyframes movehand011 {
+	0% {left: 130px; top: 150px;}
+	100% {left:220px; top:110px; }
+}
+@-webkit-keyframes movehand011 {
+    0% {left: 130px; top: 150px;}
+	100%{left:220px; top:110px; }
+}
+@keyframes movehand01 {
+	0% {left: 220px; top: 110px;}
+	100% {left:226px; top:55px; }
+}
+@-webkit-keyframes movehand01 {
+	0% {left: 220px; top: 110px;}
+	100% {left:226px; top:55px; }
+}
+
+@keyframes movep2 {
+	0%{transform: rotate(-14deg);}
+	100%{transform :rotate(-18deg);}
+}
+@-webkit-keyframes movep2 {
+	0%{transform: rotate(-14deg);}
+	100%{transform :rotate(-18deg);}
+}
+@keyframes movehand02 {
+	0% { left: 235px; top: 33px;}
+	100% { left: 232px; top: 47px; }
+}
+@-webkit-keyframes movehand02 {
+	0% { left: 235px; top: 33px;}
+	100% { left: 232px; top: 47px; }
+}
