@@ -4,15 +4,18 @@ let labs = [
     experiments: [
       {
         id: "Vane Anemometer",
-        path: "http://vlabs.iitb.ac.in/vlabs-dev/labs/nitk_labs/mining-enviornment/labs/vane-anemometer-nitk/index.html",
+        // path: "http://vlabs.iitb.ac.in/vlabs-dev/labs/nitk_labs/mining-enviornment/labs/vane-anemometer-nitk/index.html",
+        path: "mining_environment/Air-Velocity-using-Vane-Anemometer-nitk/index.html",
       },
       {
         id: "Determination of Relative Humidity of Assman Psychrometer",
-        path: "http://vlabs.iitb.ac.in/vlabs-dev/labs/nitk_labs/mining-enviornment/labs/assman-psychrometer-nitk/index.html",
+        // path: "http://vlabs.iitb.ac.in/vlabs-dev/labs/nitk_labs/mining-enviornment/labs/assman-psychrometer-nitk/index.html",
+        path: "mining_environment/exp2/relative-humidity-using-assman-psychrometer-nitk/index.html",
       },
       {
         id: "Determination of Relative Humidity of Whirling Hygrometer",
-        path: "http://vlabs.iitb.ac.in/vlabs-dev/labs/nitk_labs/mining-enviornment/labs/whirling-hygrometer-nitk/index.html",
+        // path: "http://vlabs.iitb.ac.in/vlabs-dev/labs/nitk_labs/mining-enviornment/labs/whirling-hygrometer-nitk/index.html",
+        path: "mining_environment/exp2/relative-humidity-using-whirling-hygrometer-nitk/index.html",
       },
       {
         id: "Determination of Air Velocity in the Ventilation Duct",
