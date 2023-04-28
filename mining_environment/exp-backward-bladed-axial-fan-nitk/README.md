@@ -5,7 +5,7 @@
 <b>Discipline | <b>Engineering
 :--|:--|
 <b> Lab | <b>  Mining Environmental Engineering Lab
-<b> Experiment| <b> 4.Determination of the shock loss factor for a U bend in the Ventilation duct
+<b> Experiment| <b> 4.Determination of Air Velocity in Ventilation Duct
 
 <h5> About the Lab (Objective) : </h5>
 
@@ -20,7 +20,7 @@ The main objective of this laboratory is to give the student hands-on experience
 
 <h5> Course Alignment : </h5>
 
-Following are the courses in which one can come across the theory connected to the experiments in this lab:
+Following are the courses in which one can come across the theory connected to the experiments in this lab :
 <li>Mine Environment & Ventilation Engineering Lab- National Institute of Technology Karnataka Surathkal, Anna University</li>
 <li>Mine Environment & Ventilation Engineering- National Institute of Technology Karnataka Surathkal, Anna University</li>
 <h5> Universities Mapped : </h5>
@@ -30,8 +30,9 @@ Following are the courses in which one can come across the theory connected to t
 <b>Name of Developer</b>  | <b> Dr.Pruthviraj U</b>
 :--|:--|
 <b> Institute</b>  | <b> National Institute of Technology Karnataka Surathkal</b>
-<b> Email id</b> | <b> pruthviu@nitk.edu.in</b>
+<b> Email id</b> |  <b> pruthviu@nitk.edu.in</b>
 <b> Department | Water Resources & Ocean Engineering
+
 
 #### Mentor Details
 

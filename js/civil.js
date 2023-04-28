@@ -43,7 +43,7 @@ let labs = [
       },
       {
         id: "Study of Characteristics Curve of Backward Bladed Axial Fan",
-        path: "mining_environment/exp-backward-bladed-centrifugal-fan-nitk",
+        path: "mining_environment/exp-backward-bladed-axial-fan-nitk",
       },
     ],
   },
